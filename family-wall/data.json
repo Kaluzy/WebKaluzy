@@ -1,26 +1,22 @@
 {
+  "revision": 2,
+  "priority": "normal",
   "date": "Friday • September 4",
-  "updated": "Sep 4, 2026 • 11:16 PM",
-  "abi": {
-    "now": [
-      "📖 Read 20 minutes",
-      "➕ Practice addition/subtraction facts"
-    ],
-    "next": [
-      "🎒 Bring All About Me bag on Tuesday, Sep 8",
-      "😴 Good sleep before school"
-    ]
-  },
-  "raphi": {
-    "now": [
-      "📚 Read tonight",
-      "✖️ Practice factors and multiples"
-    ],
-    "next": [
-      "📝 Math quiz coming next week",
-      "😴 Good sleep before school"
-    ]
-  },
+  "updated": "Sep 4, 2026 • 11:20 PM",
+  "abiTonight": [
+    "📖 Read 20 minutes",
+    "➕ Practice addition/subtraction facts"
+  ],
+  "abiNext": [
+    "🎒 All About Me bag due Tuesday, Sep 8"
+  ],
+  "raphiTonight": [
+    "📚 Read tonight",
+    "✖️ Practice factors and multiples"
+  ],
+  "raphiNext": [
+    "📝 Math quiz coming next week"
+  ],
   "family": [
     "🚫 No school Monday, Sep 7 — Labor Day",
     "🏫 Back-to-School Night — Thursday, Sep 17",
