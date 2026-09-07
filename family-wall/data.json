@@ -1,31 +1,39 @@
 {
-  "revision": 2,
+  "revision": 3,
   "priority": "normal",
-  "date": "Friday • September 4",
-  "updated": "Sep 4, 2026 • 11:20 PM",
+  "date": "Monday • September 7",
+  "updated": "Sep 7, 2026 • 8:04 AM",
   "abiTonight": [
     "📖 Read 20 minutes",
-    "➕ Practice addition/subtraction facts"
+    "🎒 Make sure All About Me bag is ready for Tuesday"
   ],
   "abiNext": [
-    "🎒 All About Me bag due Tuesday, Sep 8"
+    "🏫 Return to school Tuesday, Sep 8",
+    "🍳 If buying breakfast, be in cafeteria line before 9:25 AM",
+    "➕ Keep practicing addition/subtraction facts"
   ],
   "raphiTonight": [
-    "📚 Read tonight",
-    "✖️ Practice factors and multiples"
+    "📚 Read today",
+    "✖️ Practice factors and multiples",
+    "🔢 Review prime and composite numbers"
   ],
   "raphiNext": [
-    "📝 Math quiz coming next week"
+    "📝 Sub-Unit 1 math quiz this week",
+    "🏫 Return to school Tuesday, Sep 8"
   ],
   "family": [
-    "🚫 No school Monday, Sep 7 — Labor Day",
-    "🏫 Back-to-School Night — Thursday, Sep 17",
-    "⏰ Early release — Friday, Sep 18"
+    "🚫 No school today — Labor Day",
+    "🎉 Spirit Week — Sep 14–18",
+    "🏫 Back-to-School Night — Thu, Sep 17 • 6:00–7:15 PM",
+    "⏰ Early release — Fri, Sep 18 • 1:20 PM",
+    "🚫 No school — Mon, Sep 21",
+    "👀 Farmland Open House — Mon, Oct 12 • 9:20–11:30 AM"
   ],
-  "parentAction": "Prepare Abi's All About Me bag for Tuesday. Nothing else urgent tonight.",
+  "parentAction": "Today: prepare Abi's All About Me bag and give Raphi a short math review. Plan ahead for the Sep 18 early release.",
   "status": [
-    "🚌 Transportation: No new problem reported",
-    "🍎 Lunch/MySchoolBucks: No new issue reported",
-    "📝 Forms/Supplies: No new required form or purchase"
+    "🚌 Transportation: No new bus/transportation issue reported",
+    "🍎 Lunch/MySchoolBucks: No new payment or balance issue reported",
+    "📝 Forms/Supplies: No new required form, permission slip, or supply purchase",
+    "✅ School email check complete — nothing else urgent"
   ]
 }
