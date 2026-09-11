@@ -1,14 +1,16 @@
 {
-  "revision": 6,
+  "revision": 7,
   "priority": "important",
-  "date": "Thursday • September 10",
-  "updated": "Sep 10, 2026 • 6:17 PM",
+  "date": "Friday • September 11",
+  "updated": "Sep 11, 2026 • 6:33 PM",
   "abiTonight": [
     "📖 Read 20 minutes",
-    "➕ Practice addition/subtraction facts"
+    "✅ No assigned math homework until further notice",
+    "✅ No spelling homework until after Back-to-School Night"
   ],
   "abiNext": [
-    "🏫 School tomorrow — Friday, Sep 11",
+    "🏫 Next school day — Monday, Sep 14",
+    "✨ Spirit Week Monday: Dress to Impress",
     "🍳 If buying breakfast, be in cafeteria line before 9:25 AM"
   ],
   "raphiTonight": [
@@ -17,22 +19,25 @@
     "🔢 Review prime and composite numbers"
   ],
   "raphiNext": [
-    "📝 Math quiz may still be this week — review tonight",
-    "🏫 School tomorrow — Friday, Sep 11"
+    "🏫 Next school day — Monday, Sep 14",
+    "✨ Spirit Week begins Monday"
   ],
   "family": [
     "🎉 Spirit Week — Sep 14–18",
     "🏫 Back-to-School Night — Thu, Sep 17 • 6:00–7:15 PM",
     "⏰ Early release — Fri, Sep 18 • 1:20 PM",
+    "🎪 Fall Festival — Fri, Sep 18 • 5:00–7:00 PM",
     "🎵 Instrumental Music parent meeting — Fri, Sep 18 • 5:30 PM (4th & 5th grade; optional)",
     "🚫 No school — Mon, Sep 21",
+    "📸 Picture Day — Mon, Sep 28",
     "👀 Farmland Open House — Mon, Oct 12 • 9:20–11:30 AM"
   ],
-  "parentAction": "Important: Farmland sent notices that prior-year cafeteria meal balances for both children need parent review/payment in MySchoolBucks. Please check the account tonight. If Raphi is interested in an instrument, the optional parent meeting is Friday, Sep 18 at 5:30 PM.",
+  "parentAction": "Important: Please review/pay the prior-year cafeteria balances in MySchoolBucks. For Abi, Farmland is adding a sixth 2nd-grade class; an optional family feedback survey is due Friday, Sep 18 if you want friendships or other helpful information considered during class placement.",
   "status": [
     "🚌 Transportation: No new bus/transportation issue reported",
-    "🍎 Lunch/MySchoolBucks: Parent action needed for prior-year cafeteria balances",
-    "📝 Forms/Supplies: No new required form, permission slip, or supply purchase",
+    "🍎 Lunch/MySchoolBucks: Parent action still needed for prior-year cafeteria balances",
+    "📝 Forms/Supplies: Optional 2nd-grade family feedback survey due Sep 18",
+    "👧 2nd Grade: Farmland is adding a sixth classroom; current class stays the same until a new teacher is hired",
     "🎵 Opportunity: Farmland instrumental music is open to 4th & 5th graders; no experience required"
   ]
 }
