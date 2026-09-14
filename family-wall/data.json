@@ -1,26 +1,27 @@
 {
-  "revision": 7,
+  "revision": 8,
   "priority": "important",
-  "date": "Friday • September 11",
-  "updated": "Sep 11, 2026 • 6:33 PM",
+  "date": "Monday • September 14",
+  "updated": "Sep 14, 2026 • 6:11 PM",
   "abiTonight": [
     "📖 Read 20 minutes",
     "✅ No assigned math homework until further notice",
     "✅ No spelling homework until after Back-to-School Night"
   ],
   "abiNext": [
-    "🏫 Next school day — Monday, Sep 14",
-    "✨ Spirit Week Monday: Dress to Impress",
+    "🏫 Next school day — Tuesday, Sep 15",
+    "🔤 Spirit Week Tuesday: Scrabble Day — wear a shirt with a large letter and make words with friends",
     "🍳 If buying breakfast, be in cafeteria line before 9:25 AM"
   ],
   "raphiTonight": [
-    "📚 Read tonight",
-    "✖️ Practice factors and multiples",
-    "🔢 Review prime and composite numbers"
+    "📚 Read for 20 minutes",
+    "✏️ Math Lesson 9 — pages 15–16 — due Tuesday, Sep 15",
+    "➗ Practice multiplication and division facts"
   ],
   "raphiNext": [
-    "🏫 Next school day — Monday, Sep 14",
-    "✨ Spirit Week begins Monday"
+    "🏫 Next school day — Tuesday, Sep 15",
+    "🔤 Spirit Week Tuesday: Scrabble Day — wear a shirt with a large letter and make words with friends",
+    "📘 Math Lesson 9 pages 15–16 due"
   ],
   "family": [
     "🎉 Spirit Week — Sep 14–18",
@@ -32,11 +33,12 @@
     "📸 Picture Day — Mon, Sep 28",
     "👀 Farmland Open House — Mon, Oct 12 • 9:20–11:30 AM"
   ],
-  "parentAction": "Important: Please review/pay the prior-year cafeteria balances in MySchoolBucks. For Abi, Farmland is adding a sixth 2nd-grade class; an optional family feedback survey is due Friday, Sep 18 if you want friendships or other helpful information considered during class placement.",
+  "parentAction": "Important: Please review/pay the prior-year cafeteria balances in MySchoolBucks. For Abi, the optional 2nd-grade family feedback survey is due Friday, Sep 18 if you want friendships or other helpful information considered during class placement.",
   "status": [
-    "🚌 Transportation: No new bus/transportation issue reported",
+    "🚌 Transportation: Pink Bus used a substitute bus today; no ongoing issue reported for tomorrow",
     "🍎 Lunch/MySchoolBucks: Parent action still needed for prior-year cafeteria balances",
     "📝 Forms/Supplies: Optional 2nd-grade family feedback survey due Sep 18",
+    "📅 Attendance: Student absences can now be reported directly in ParentVUE",
     "👧 2nd Grade: Farmland is adding a sixth classroom; current class stays the same until a new teacher is hired",
     "🎵 Opportunity: Farmland instrumental music is open to 4th & 5th graders; no experience required"
   ]
