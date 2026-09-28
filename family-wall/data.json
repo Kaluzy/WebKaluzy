@@ -1,46 +1,47 @@
 {
-  "revision": 10,
+  "revision": 11,
   "priority": "important",
-  "date": "Wednesday • September 16",
-  "updated": "Sep 16, 2026 • 6:39 PM",
+  "date": "Sunday • September 27",
+  "updated": "Sep 27, 2026 • 9:03 PM",
   "abiTonight": [
     "📖 Read 20 minutes",
-    "✅ No assigned math homework until further notice",
-    "✅ No spelling homework until after Back-to-School Night",
-    "🏫 Back-to-School Night is tomorrow — parent event"
+    "🔤 Practice Unit 1 spelling: pick, small, fall, wish, much",
+    "👕 Pick Picture Day clothes for tomorrow",
+    "🎒 Put spelling packet/backpack by the door"
   ],
   "abiNext": [
-    "🏫 Next school day — Thursday, Sep 17",
-    "🎉 Spirit Week continues Thursday",
-    "🍳 If buying breakfast, be in cafeteria line before 9:25 AM"
+    "📸 Picture Day — Monday, Sep 28",
+    "📝 Unit 1 spelling test — Monday, Sep 28",
+    "🔤 New Unit 2 words Monday: best, its, which, drink, some",
+    "📖 Read 20 minutes nightly",
+    "➗ No assigned math homework until further notice"
   ],
   "raphiTonight": [
-    "📚 Read for 20 minutes",
-    "➗ Practice multiplication and division facts",
-    "🏫 Back-to-School Night is tomorrow — parent event"
+    "📚 Read 20 minutes",
+    "➗ Finish Unit 2 Lesson 3, pages 23–24 — due Monday",
+    "👕 Pick Picture Day clothes for tomorrow"
   ],
   "raphiNext": [
-    "🏫 Next school day — Thursday, Sep 17",
-    "🎉 Spirit Week continues Thursday"
+    "📸 Picture Day — Monday, Sep 28",
+    "➗ Tue Sep 29: Unit 2 Lesson 4, pages 25–26",
+    "📚 ELA Unit 1 assessment — Tuesday & Wednesday",
+    "➗ Math sub-unit assessment coming this week",
+    "📖 Read 20 minutes daily"
   ],
   "family": [
-    "🎉 Spirit Week — Sep 14–18",
-    "🏫 Back-to-School Night — Thu, Sep 17 • Session 1: 6:00–6:35 PM; Session 2: 6:40–7:15 PM",
-    "⏰ Early release — Fri, Sep 18 • 1:20 PM",
-    "🎪 Fall Festival — Fri, Sep 18 • 5:00–7:00 PM",
-    "🎵 Instrumental Music parent meeting — Fri, Sep 18 • 5:30 PM (4th & 5th grade; optional)",
-    "🚫 No school — Mon, Sep 21",
     "📸 Picture Day — Mon, Sep 28",
-    "👀 Farmland Open House — Mon, Oct 12 • 9:20–11:30 AM",
-    "📚 Family literacy enrichment night — Mon, Nov 16 • 6:30–7:30 PM"
+    "🏫 Parent Classroom Visitation — Mon, Oct 12 • 9:25–11:30 AM",
+    "📚 Family literacy enrichment night — Mon, Nov 16 • 6:30–7:30 PM",
+    "🌾 Fridays are Farmland Fridays — wear school gear/colors if desired"
   ],
-  "parentAction": "Important: Back-to-School Night is tomorrow, Thursday Sep 17. Choose one session: 6:00–6:35 PM or 6:40–7:15 PM; Raphi's first session is in person only and the second can be in person or virtual. Abi's teacher also offers the second session virtually. Please also review/pay both children's cafeteria balances in MySchoolBucks. Abi's optional 2nd-grade family feedback survey is due Friday, Sep 18 if you want placement information considered.",
+  "parentAction": "Tonight: get Picture Day clothes ready, practice Abi’s five spelling words, and make sure Raphi finishes Math Unit 2 Lesson 3 (pp. 23–24). Lunch balances also need attention: last verified current-year alerts were Abi $38.45 and Raphi $27.60 on Sep 25. Parent Classroom Visitation is Oct 12 from 9:25–11:30 AM; families may quietly observe each child’s classroom.",
   "status": [
-    "🏫 Back-to-School Night: Tomorrow, Sep 17 — two session choices; parent-focused event",
-    "🍎 Lunch/MySchoolBucks: Negative-balance alerts remain active for both children — parent action needed",
-    "📝 Forms/Supplies: Optional 2nd-grade family feedback survey due Sep 18",
-    "📅 Attendance: Student absences can be reported directly in ParentVUE",
-    "👧 2nd Grade: Farmland is adding a sixth classroom; current class stays the same until a new teacher is hired",
-    "🎵 Opportunity: Farmland instrumental music is open to 4th & 5th graders; no experience required"
+    "📸 Tomorrow: Picture Day for both children",
+    "🍎 Lunch/MySchoolBucks: last verified current-year balances — Abi $38.45; Raphi $27.60",
+    "👧 Abi: spelling test Monday; 20-minute nightly reading; no math homework for now",
+    "👦 Raphi: math homework schedule active; ELA Unit 1 assessment Tue/Wed",
+    "🏫 New: Parent Classroom Visitation Oct 12 — parents may visit both children’s classrooms",
+    "🚌 Transportation: no new change found in the latest school messages",
+    "📝 Forms/Supplies: no new required form or supply request found"
   ]
 }
