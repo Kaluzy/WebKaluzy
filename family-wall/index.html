@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Family Wall</title>
   <style>
     :root{
@@ -160,8 +162,69 @@ function dateBadge(text,icon){const re=/\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?
 function eventList(items){const el=document.getElementById('family');const arr=(items&&items.length?items:['✅ Nothing new']);el.innerHTML=arr.map(x=>{const m=x.match(/^(\S+)\s+(.*)$/);const icon=m?m[1]:'•';const text=m?m[2]:x;return '<div class="event">'+dateBadge(text,icon)+'<div class="event-text">'+esc(text)+'</div></div>'}).join('')}
 function statusList(items){const labels=['Transportation','Lunch / MySchoolBucks','Forms / Supplies'];const arr=(items&&items.length?items:['No new problem','No new issue','No action']);document.getElementById('status').innerHTML=arr.slice(0,3).map((x,i)=>'<div class="status-pill"><div class="label">'+esc(labels[i]||'Status')+'</div><div class="value"><span class="ok">●</span> '+esc(x.replace(/^\S+\s*/,'').replace(/^[^:]+:\s*/,''))+'</div></div>').join('')}
 function tick(){const n=new Date();const hour=n.getHours();const greeting=hour<12?'Good morning':hour<17?'Good afternoon':'Good evening';const focus=hour<12?'Today':hour<17?'This afternoon':'Tonight';document.getElementById('greeting').textContent=greeting+', family';document.getElementById('abiFocusLabel').textContent=focus;document.getElementById('raphiFocusLabel').textContent=focus;document.getElementById('clock').textContent=n.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});document.getElementById('date').textContent=n.toLocaleDateString([],{weekday:'long',month:'long',day:'numeric'});}setInterval(tick,1000);tick();
-async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error();const d=await r.json();const version=String(d.revision??d.updated??'');const last=localStorage.getItem('familyWallRevision');if(last&&version&&last!==version){const important=d.priority==='important'||d.priority==='urgent';showNotice(important);chime(important)}if(version)localStorage.setItem('familyWallRevision',version);document.getElementById('updated').textContent='Updated '+(d.updated||'just now');taskList('abiTonight',d.abiTonight||d.abi);taskList('abiNext',d.abiNext||[]);taskList('raphiTonight',d.raphiTonight||d.raphi);taskList('raphiNext',d.raphiNext||[]);eventList(d.family);document.getElementById('parent').textContent=d.parentAction||'Nothing urgent right now.';statusList(d.status)}catch(e){document.getElementById('updated').textContent='Waiting for update…'}}
-load();setInterval(load,180000);
+const PAGE_STARTED=Date.now();
+let retryTimer=null;
+async function fetchJson(url,timeout=8000){
+  const ctrl=new AbortController();
+  const timer=setTimeout(()=>ctrl.abort(),timeout);
+  try{
+    const r=await fetch(url,{cache:'no-store',signal:ctrl.signal,headers:{'Cache-Control':'no-cache'}});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    return await r.json();
+  }finally{clearTimeout(timer)}
+}
+async function getFreshData(){
+  const stamp=Date.now();
+  const sources=[
+    'data.json?t='+stamp,
+    'https://raw.githubusercontent.com/Kaluzy/WebKaluzy/main/family-wall/data.json?t='+stamp
+  ];
+  let lastErr;
+  for(const url of sources){
+    for(let attempt=0;attempt<2;attempt++){
+      try{return await fetchJson(url)}
+      catch(e){lastErr=e;if(attempt===0)await new Promise(r=>setTimeout(r,900))}
+    }
+  }
+  throw lastErr||new Error('Unable to load data');
+}
+function render(d){
+  const version=String(d.revision??d.updated??'');
+  const last=localStorage.getItem('familyWallRevision');
+  if(last&&version&&last!==version){
+    const important=d.priority==='important'||d.priority==='urgent';
+    showNotice(important);chime(important)
+  }
+  if(version)localStorage.setItem('familyWallRevision',version);
+  localStorage.setItem('familyWallLastGood',JSON.stringify(d));
+  document.getElementById('updated').textContent='Updated '+(d.updated||'just now');
+  taskList('abiTonight',d.abiTonight||d.abi);taskList('abiNext',d.abiNext||[]);
+  taskList('raphiTonight',d.raphiTonight||d.raphi);taskList('raphiNext',d.raphiNext||[]);
+  eventList(d.family);document.getElementById('parent').textContent=d.parentAction||'Nothing urgent right now.';
+  statusList(d.status)
+}
+async function load(){
+  if(retryTimer){clearTimeout(retryTimer);retryTimer=null}
+  try{render(await getFreshData())}
+  catch(e){
+    const saved=localStorage.getItem('familyWallLastGood');
+    if(saved){try{render(JSON.parse(saved));document.getElementById('updated').textContent+=' • offline copy'}catch(_){}}
+    else document.getElementById('updated').textContent='Connection interrupted — retrying…';
+    retryTimer=setTimeout(load,15000)
+  }
+}
+load();
+setInterval(load,180000);
+window.addEventListener('online',load);
+window.addEventListener('focus',load);
+document.addEventListener('visibilitychange',()=>{
+  if(document.visibilityState==='visible'){
+    if(Date.now()-PAGE_STARTED>12*60*60*1000){
+      const u=new URL(location.href);u.searchParams.set('refresh',Date.now());location.replace(u.toString())
+    }else load()
+  }
+});
+document.getElementById('updated').addEventListener('click',load);
 </script>
 </body>
 </html>
