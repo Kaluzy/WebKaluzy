@@ -1,45 +1,44 @@
 {
-  "revision": 14,
+  "revision": 15,
   "priority": "important",
-  "date": "Monday • October 19",
-  "updated": "Oct 19, 2026 • evening school + activities update",
+  "date": "Thursday • October 22",
+  "updated": "Oct 22, 2026 • morning school and activities refresh",
   "abiTonight": [
-    "📖 Read for 20 minutes",
-    "🪙 Practice coin math: make 80¢ and $1",
-    "🎒 Spelling packet is delayed; expect it Tuesday"
+    "📖 Read 20 minutes tonight",
+    "🔤 Practice spelling: funny, open, myself, why, try",
+    "👋 Meet Ms. Lee and new classmates today"
   ],
   "abiNext": [
-    "📝 New spelling packet expected Tue, Oct 20",
-    "📚 Grade 2 Ancient Greece reading assessment — Wed, Oct 21",
-    "🦁 Check folder for Zoo permission slip — return by Fri, Oct 23",
-    "🤸 PomPons — Mon, Oct 26 • 5:45–6:45 PM at Potomac Rec"
+    "🏫 First day in Ms. Lee's class — Fri, Oct 23",
+    "📝 Check spelling packet; Unit 5 test Mon, Oct 26",
+    "🦁 Check signed Zoo permission slip; trip Fri, Oct 30"
   ],
   "raphiTonight": [
-    "📖 Read for 20 minutes",
-    "➗ Review comparing and ordering fractions for Tuesday",
-    "🎒 Pack your school bag and water bottle"
+    "📖 Read 20 minutes tonight",
+    "➗ No math homework assigned Thu or Fri this week",
+    "🌎 Optional Geography Bowl quiz tomorrow — review maps if participating"
   ],
   "raphiNext": [
-    "➗ Grade 4 math district assessment — Tue, Oct 20",
-    "✅ No math homework assigned Tue–Fri, Oct 20–23",
-    "🌎 Geography Bowl qualifying quiz — Fri, Oct 23 (optional)",
-    "📝 Unit 3 Lesson 2, pages 49–50 — due Mon, Oct 26"
+    "🌎 Optional Geography Bowl qualifying quiz — Fri, Oct 23",
+    "➗ Unit 3 Lesson 2, pages 49–50 — due Mon, Oct 26",
+    "📚 Read 20 minutes daily",
+    "⚽ Soccer registration still to be confirmed with Dad"
   ],
   "family": [
-    "➗ Raphi math assessment — Tue, Oct 20",
-    "📚 Abi Ancient Greece reading assessment — Wed, Oct 21",
-    "⚽ Raphi soccer at Farmland — Thu, Oct 22 • 3:50–5 PM (registration to confirm)",
-    "🌎 Optional Geography Bowl qualifier — Fri, Oct 23",
-    "🤸 Abi PomPons — Mon, Oct 26 • 5:45–6:45 PM at Potomac Rec",
+    "👋 Abi meets Ms. Lee's class — Thu, Oct 22",
+    "🏫 Abi starts new classroom — Fri, Oct 23",
+    "🌎 Raphi's optional Geography Bowl qualifier — Fri, Oct 23",
     "📚 Scholastic Book Fair — Oct 26–30; family shopping Thu, Oct 29 • 4–7 PM",
-    "🏃 Family Fitness Night — Thu, Oct 29 • 6–7:30 PM",
-    "🦁 Abi National Zoo field trip — Fri, Oct 30 (fee paid; check permission slip)",
-    "🎈 Classroom parties — Fri, Nov 6"
+    "🤸 Abi PomPons — Mon, Oct 26 • 5:45–6:45 PM",
+    "🏃 Fall Into Fitness Night — Thu, Oct 29 • 6–7:30 PM",
+    "🦁 Abi's National Zoo field trip — Fri, Oct 30 (fee paid; slip to confirm)",
+    "🎈 Classroom parties — Fri, Nov 6",
+    "🌎 Geography Bowls — Nov 12–13 (for qualifying students)"
   ],
-  "parentAction": "Dad: Follow up Tue, Oct 20 on Abi’s classroom placement review before the school’s planned Oct 23 switch. Check/return Zoo permission slip by Oct 23 (trip fee already paid). Verify lunch notices before paying. Confirm Raphi soccer registration.",
+  "parentAction": "Dad: Sign Raphi's school notice in ParentVUE. Book November teacher conferences for both kids. Check Abi's Zoo permission slip. Verify cafeteria balances. Raphi's soccer enrollment is not yet confirmed.",
   "status": [
-    "🚌 Transportation: no new route change confirmed",
-    "🍎 Lunch: separate current-year and prior-year balance notices; parent to verify accounts",
-    "📝 Forms: Abi Zoo fee paid Oct 6; check permission slip; classroom reassignment review pending"
+    "🚌 Transportation: no new route change verified",
+    "🍎 Lunch: cafeteria notices received; verify current and prior-year balances",
+    "📝 Forms: Raphi ParentVUE signature requested; Abi Zoo fee paid, permission slip not confirmed"
   ]
 }
