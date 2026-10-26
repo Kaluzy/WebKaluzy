@@ -1,30 +1,31 @@
 {
-  "revision": 18,
+  "revision": 19,
   "priority": "important",
-  "date": "Sunday • October 25",
-  "updated": "Oct 25, 2026 • stale notice cleanup (email sync pending)",
+  "date": "Monday • October 26",
+  "updated": "Oct 26, 2026 • 5:40 PM ET (email sync unavailable)",
   "abiTonight": [
-    "📖 Read 20 minutes each day this weekend",
-    "🗂️ Check take-home folder for math-fact practice and class schedule",
-    "🔤 Prepare for Monday's -ed spelling test"
+    "📖 Read 20 minutes tonight",
+    "🔤 Check today's new spelling packet; practice one page",
+    "📘 Review for Tuesday's ELA Skills Unit 2 assessment",
+    "➗ Practice take-home math facts; no regular math homework currently"
   ],
   "abiNext": [
-    "🔤 Spelling test on -ed words — Mon, Oct 26; new packet comes home",
-    "📘 MCPS ELA Skills Unit 2 assessment — Tue, Oct 27",
+    "📘 Grade 2 ELA Skills Unit 2 assessment — Tue, Oct 27",
     "📚 Class Book Fair visit — Wed, Oct 28",
-    "➗ No regular math homework until further notice; practice take-home facts"
+    "🔤 Follow the new spelling packet instructions; verify return date around Nov 2–3 closure"
   ],
   "raphiTonight": [
-    "📖 Read 20 minutes daily",
-    "➗ Unit 3 Lesson 2, pages 49–50 — due Mon, Oct 26",
-    "📘 Review Middle Ages vocabulary and comprehension for Tue ELA assessment"
+    "📖 Read 20 minutes tonight",
+    "➗ Math Lesson 3, pages 51–52 — due Tue, Oct 27",
+    "📘 Review Middle Ages vocabulary and comprehension for Tuesday's ELA assessment"
   ],
   "raphiNext": [
-    "➗ Math Lesson 2, pages 49–50 — Mon, Oct 26",
     "➗ Math Lesson 3, pages 51–52 — Tue, Oct 27",
-    "➗ Math Lesson 4, pages 53–54 — Wed, Oct 28",
     "📘 Grade 4 ELA Unit 2 assessment — Tue, Oct 27",
-    "📖 Read 20 minutes daily"
+    "➗ Math Lesson 4, pages 53–54 — Wed, Oct 28",
+    "➗ Math Lesson 5, pages 55–56 — Thu, Oct 29",
+    "➗ Math Lesson 6, pages 57–58 — Fri, Oct 30",
+    "➗ Math Lesson 7, pages 59–60 — Wed, Nov 4"
   ],
   "family": [
     "📚 Scholastic Book Fair — Mon–Fri, Oct 26–30",
@@ -39,10 +40,10 @@
     "🎈 Classroom parties — Fri, Nov 6 (optional PTA volunteer/donation)",
     "🌎 Geography Bowls — Nov 12–13 (qualifiers only)"
   ],
-  "parentAction": "Dad: Confirm Abi's Zoo permission slip ASAP (Oct 23 deadline passed; fee paid). Sign Raphi's ParentVUE letter if still pending. Book both November teacher conferences. Verify cafeteria invoices; plan childcare for Nov 2–3 school closure.",
+  "parentAction": "Dad: Confirm Abi's Zoo permission slip (fee paid). Finish Raphi's pending school-portal form if needed. Book November conferences. Check cafeteria notices privately and plan childcare for Nov 2–3.",
   "status": [
-    "🚌 Transportation: no ongoing route changes in last verified school notices",
-    "🍎 Lunch: repeated balance reminders; verify current and prior-year invoices before paying",
-    "📝 Forms: Abi Zoo permission slip remains unconfirmed (fee paid); Raphi ParentVUE signature unconfirmed"
+    "🚌 Transportation: no ongoing route change in last verified notices; new email check unavailable",
+    "🍎 Lunch: check school-account notices privately before payment",
+    "📝 Forms: Zoo trip fee paid; permission slip and school-portal acknowledgement unconfirmed"
   ]
 }
