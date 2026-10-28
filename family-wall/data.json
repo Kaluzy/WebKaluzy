@@ -1,27 +1,27 @@
 {
-  "revision": 20,
+  "revision": 21,
   "priority": "important",
-  "date": "Tuesday • October 27",
-  "updated": "Oct 27, 2026 • evening ET (school emails checked)",
+  "date": "Wednesday • October 28",
+  "updated": "Oct 28, 2026 • evening ET (school emails checked)",
   "abiTonight": [
     "📖 Read 20 minutes tonight",
-    "🔤 Practice a page from this week's spelling packet",
-    "📚 Prepare for Wednesday's class Book Fair visit",
-    "🎭 Wednesday: optional, school-appropriate book character outfit"
+    "🔤 Practice this week's spelling packet",
+    "🧦 Thursday: optional Mismatch Day outfit",
+    "🎒 Friday Zoo prep (if attending): lunch, labeled water, separate snack, sneakers, small bag"
   ],
   "abiNext": [
-    "📚 Class Book Fair visit — Wed, Oct 28",
-    "🎭 Book Character Day — Wed, Oct 28 (optional, no scary or weapon props)",
-    "🦁 National Zoo trip — Fri, Oct 30 (fee paid; signed slip not confirmed)",
-    "🔤 Check with teacher on packet return date after Nov 2–3 closure"
+    "🧦 Mismatch Day — Thu, Oct 29 (optional)",
+    "🦁 National Zoo trip — Fri, Oct 30 (fee paid; permission slip unconfirmed)",
+    "🎒 Friday Zoo visit: arrive on time; buses leave 9:40 AM and return about 2 PM",
+    "🔤 Confirm spelling packet return date after Nov 2–3 school closure"
   ],
   "raphiTonight": [
     "📖 Read 20 minutes tonight",
-    "➗ Math Lesson 4, pages 53–54 — due Wed, Oct 28",
-    "🎭 Wednesday: optional book character outfit for Spirit Week"
+    "➗ Math Lesson 5, pages 55–56 — due Thu, Oct 29",
+    "📚 Check backpack for returned Unit 1–2 workbooks and assignments",
+    "🧦 Thursday: optional Mismatch Day outfit"
   ],
   "raphiNext": [
-    "➗ Math Lesson 4, pages 53–54 — Wed, Oct 28",
     "➗ Math Lesson 5, pages 55–56 — Thu, Oct 29",
     "➗ Math Lesson 6, pages 57–58 — Fri, Oct 30",
     "➗ Math Lesson 7, pages 59–60 — Wed, Nov 4",
@@ -29,22 +29,19 @@
   ],
   "family": [
     "📚 Scholastic Book Fair — Oct 26–30",
-    "💻 Optional MCPS gifted/CogAT webinar — Tue, Oct 27 • 6:30 PM",
-    "🎭 Spirit Week: Book Character Day — Wed, Oct 28",
-    "📚 Abi's class shops Book Fair — Wed, Oct 28",
     "🧦 Spirit Week: Mismatch Day — Thu, Oct 29",
     "🛍️ Book Fair family shopping — Thu, Oct 29 • until 7 PM",
     "🏃 Fall Into Fitness Night — Thu, Oct 29 • 6–7:30 PM",
     "💙 Spirit Week: blue/yellow or school spirit — Fri, Oct 30",
-    "🦁 Abi National Zoo trip — Fri, Oct 30 (fee paid; confirm slip)",
+    "🦁 Abi National Zoo trip — Fri, Oct 30 (fee paid; confirm signed slip and class applicability)",
     "📅 No school — Mon–Tue, Nov 2–3 (plan childcare)",
     "🎈 Classroom parties — Fri, Nov 6 (optional PTA volunteer/donation)",
     "🌎 Geography Bowls — Nov 12–13 (qualifiers only)"
   ],
-  "parentAction": "Dad: Check new cafeteria balance alerts for both children privately; confirm Abi's Zoo permission slip (trip fee paid); verify Raphi's portal form signature; book November conferences and arrange childcare for Nov 2–3.",
+  "parentAction": "Dad: Confirm Abi's Zoo trip still applies after class move and signed slip was received (fee paid); pack lunch, labeled water, separate snack and comfortable shoes for Fri; check cafeteria balances privately; verify Raphi's portal signature; book November conferences and plan childcare Nov 2–3.",
   "status": [
-    "🚌 Transportation: no ongoing route change in latest school notices",
-    "🍎 Lunch: new Oct 27 negative-balance alerts for both children; verify privately before payment",
-    "📝 Forms: Zoo fee paid, signed slip unconfirmed; portal signature unconfirmed; November conference sign-ups open"
+    "🚌 Transportation: no continuing bus-route change found; Friday Zoo buses leave 9:40 AM and return about 2 PM",
+    "🍎 Lunch: Oct 28 generic reminder is not a new balance; latest itemized Oct 27 alerts remain to verify privately",
+    "📝 Forms: Zoo fee paid, signed slip and class applicability unconfirmed; portal signature unconfirmed; conferences open"
   ]
 }
