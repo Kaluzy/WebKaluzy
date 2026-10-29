@@ -86,7 +86,11 @@
     .date-tile.icon-only{font-size:24px}
     .event-text{font-size:18px;font-weight:720;line-height:1.28;color:#eef2f6}
     .parent-action{background:linear-gradient(145deg,rgba(242,200,121,.12),rgba(20,34,55,.98) 58%);border-color:rgba(242,200,121,.18)}
-    .parent-action .big{font-size:22px;font-weight:820;line-height:1.35;color:#fbefd3}
+    .parent-action .big{font-size:15px;font-weight:650;line-height:1.4;color:#f1e6cf}
+    .action-group{margin:0 0 13px}.action-group:last-child{margin-bottom:0}
+    .action-heading{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);font-weight:900;margin-bottom:7px}
+    .action-line{padding:7px 0;border-top:1px solid rgba(255,255,255,.075);font-size:15px;line-height:1.35}
+    .action-line:first-of-type{border-top:0}
     .parent-hint{font-size:11px;color:#9c8d6e;margin-top:12px;font-weight:700}
 
     .status-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
@@ -200,7 +204,11 @@ function render(d){
   document.getElementById('updated').textContent='Updated '+(d.updated||'just now');
   taskList('abiTonight',d.abiTonight||d.abi);taskList('abiNext',d.abiNext||[]);
   taskList('raphiTonight',d.raphiTonight||d.raphi);taskList('raphiNext',d.raphiNext||[]);
-  eventList(d.family);document.getElementById('parent').textContent=d.parentAction||'Nothing urgent right now.';
+  eventList(d.family);
+  const p=document.getElementById('parent');
+  if(Array.isArray(d.parentActions)){
+    p.innerHTML=d.parentActions.map(group=>'<div class="action-group"><div class="action-heading">'+esc(group.title)+'</div>'+group.items.map(item=>'<div class="action-line">'+esc(item)+'</div>').join('')+'</div>').join('');
+  }else p.textContent=d.parentAction||'Nothing urgent right now.';
   statusList(d.status)
 }
 async function load(){
