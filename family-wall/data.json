@@ -1,8 +1,8 @@
 {
-  "revision": 22,
+  "revision": 23,
   "priority": "important",
   "date": "Thursday • October 29",
-  "updated": "Oct 29, 2026 • evening ET (school emails checked)",
+  "updated": "Oct 29, 2026 • 7:25 PM ET",
   "abiTonight": [
     "📖 Read 20 minutes tonight",
     "🔤 Practice this week's spelling packet",
@@ -35,10 +35,27 @@
     "🎈 Classroom parties — Fri, Nov 6 (volunteering/donations optional)",
     "🌎 Geography Bowls — Nov 12–13 (qualifiers only)"
   ],
-  "parentAction": "Dad: Tonight, consider Book Fair family shopping/Fitness Night; prepare Abi's Friday Zoo lunch, water, separate snack and walking shoes, and confirm her trip applies after class move and signed slip was received (fee paid). Review new Oct 29 cafeteria alerts and repeated prior-year invoices privately; verify Raphi's ParentVUE signature, book November conferences, and arrange childcare Nov 2–3.",
+  "parentAction": "Prepare Abi's Zoo bag and confirm permission slip. Review cafeteria notices, ParentVUE signature, and conference bookings.",
   "status": [
     "🚌 Transportation: Oct 29 Green Bus delay was followed by a bus-arrived notice; no lasting route change identified. Friday Zoo buses leave 9:40 AM and return about 2 PM",
     "🍎 Lunch: new itemized cafeteria balance alerts Oct 29 for both children; prior-year invoices repeated, not new extra charges. Review accounts privately",
     "📝 Forms: Zoo fee paid; signed slip and current class participation unconfirmed. Raphi's portal signature and November conferences remain to verify"
+  ],
+  "parentActions": [
+    {
+      "title": "Do now",
+      "items": [
+        "Abi: pack lunch, water, snack and sneakers for Friday's Zoo trip.",
+        "Confirm Abi's signed permission slip and trip participation."
+      ]
+    },
+    {
+      "title": "Check privately",
+      "items": [
+        "Review current and prior-year lunch invoices.",
+        "Verify Raphi's ParentVUE signature.",
+        "Book November parent-teacher conferences."
+      ]
+    }
   ]
 }
