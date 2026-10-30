@@ -1,60 +1,52 @@
 {
-  "revision": 23,
+  "revision": 24,
   "priority": "important",
-  "date": "Thursday • October 29",
-  "updated": "Oct 29, 2026 • 7:25 PM ET",
+  "date": "Friday • October 30",
+  "updated": "Oct 30, 2026 • 5:48 PM ET (school emails checked)",
   "abiTonight": [
-    "📖 Read 20 minutes tonight",
-    "🔤 Practice this week's spelling packet",
-    "🎒 Pack for Friday's Zoo trip if confirmed: substantial lunch, labeled water, separate snack, sneakers, small bag",
-    "💙 Friday: optional blue/yellow or Farmland spirit clothing"
+    "📖 Read 20 minutes over the weekend",
+    "🔤 Practice the spelling packet; confirm return date after the Nov 2–3 closure"
   ],
   "abiNext": [
-    "🦁 National Zoo trip — Fri, Oct 30 (fee paid; signed permission slip and current class participation unconfirmed)",
-    "🚌 Zoo buses leave school 9:40 AM and return about 2 PM; arrive on time",
-    "🔤 Confirm spelling packet return date following Nov 2–3 school closure"
+    "📅 Back to school Wed, Nov 4 (no school Mon–Tue)",
+    "🔤 Check new classroom spelling and homework instructions after the closure"
   ],
   "raphiTonight": [
-    "📖 Read 20 minutes tonight",
-    "➗ Math Lesson 6, pages 57–58 — due Fri, Oct 30",
-    "📚 Check backpack for returned Unit 1–2 workbooks and assignments",
-    "💙 Friday: optional blue/yellow or Farmland spirit clothing"
+    "📖 Read 20 minutes over the weekend",
+    "➗ Prepare Math Lesson 7, pages 59–60 — due Wed, Nov 4"
   ],
   "raphiNext": [
-    "➗ Math Lesson 6, pages 57–58 — Fri, Oct 30",
-    "➗ Math Lesson 7, pages 59–60 — Wed, Nov 4",
-    "📚 Book Fair eWallet funding confirmed; check remaining fair shopping plans"
+    "➗ Math Lesson 7, pages 59–60 — due Wed, Nov 4",
+    "📅 Back to school Wed, Nov 4 (no school Nov 2–3)"
   ],
   "family": [
-    "📚 Scholastic Book Fair — through Fri, Oct 30",
-    "🛍️ Book Fair family shopping — Thu, Oct 29 • through 7 PM",
-    "🏃 Fall Into Fitness Night — Thu, Oct 29 • 6–7:30 PM",
-    "💙 Spirit Week: blue/yellow or school spirit — Fri, Oct 30",
-    "🦁 Abi National Zoo trip — Fri, Oct 30 (fee paid; confirm signed slip and class participation)",
-    "📅 No school — Mon–Tue, Nov 2–3 (plan childcare)",
+    "🕒 Set clocks back one hour — Sun, Nov 1",
+    "📅 No school — Mon–Tue, Nov 2–3 (arrange childcare)",
+    "🍬 Optional candy donation drive — through Fri, Nov 6 (unopened candy; school office)",
     "🎈 Classroom parties — Fri, Nov 6 (volunteering/donations optional)",
-    "🌎 Geography Bowls — Nov 12–13 (qualifiers only)"
+    "🌎 Geography Bowls — Nov 12–13 (qualifiers only)",
+    "👩‍🏫 Parent-teacher conferences — Nov 23–24 (appointments unconfirmed)"
   ],
-  "parentAction": "Prepare Abi's Zoo bag and confirm permission slip. Review cafeteria notices, ParentVUE signature, and conference bookings.",
+  "parentAction": "Review both lunch accounts, arrange Nov 2–3 childcare, and verify ParentVUE/conference bookings. Zoo fee was paid; trip participation and slip were not confirmed.",
   "status": [
-    "🚌 Transportation: Oct 29 Green Bus delay was followed by a bus-arrived notice; no lasting route change identified. Friday Zoo buses leave 9:40 AM and return about 2 PM",
-    "🍎 Lunch: new itemized cafeteria balance alerts Oct 29 for both children; prior-year invoices repeated, not new extra charges. Review accounts privately",
-    "📝 Forms: Zoo fee paid; signed slip and current class participation unconfirmed. Raphi's portal signature and November conferences remain to verify"
+    "🚌 Transportation: No new ongoing bus-route changes in Oct 30 school emails; the earlier Green Bus delay was resolved.",
+    "🍎 Lunch: Oct 30 current-year cafeteria alerts for both children; older prior-year notices are separate repeat invoices. Check accounts privately.",
+    "📝 Forms: Zoo trip fee paid, but slip/participation not verified; Raphi's portal signature and conference bookings still unconfirmed. No new required supplies."
   ],
   "parentActions": [
     {
-      "title": "Do now",
+      "title": "This weekend",
       "items": [
-        "Abi: pack lunch, water, snack and sneakers for Friday's Zoo trip.",
-        "Confirm Abi's signed permission slip and trip participation."
+        "Review both cafeteria accounts: Oct 30 alerts, plus separate older invoices.",
+        "Arrange childcare for the Nov 2–3 school closure."
       ]
     },
     {
-      "title": "Check privately",
+      "title": "Still to verify",
       "items": [
-        "Review current and prior-year lunch invoices.",
-        "Verify Raphi's ParentVUE signature.",
-        "Book November parent-teacher conferences."
+        "Book November parent-teacher conferences.",
+        "Confirm Raphi's ParentVUE signature.",
+        "Abi's Oct 30 Zoo trip: fee paid; slip and participation unconfirmed."
       ]
     }
   ]
