@@ -1,53 +1,52 @@
 {
-  "revision": 25,
+  "revision": 26,
   "priority": "normal",
-  "date": "Saturday • October 31",
-  "updated": "Oct 31, 2026 • evening ET (MCPS calendar checked; email inbox unavailable)",
+  "date": "Sunday • November 1",
+  "updated": "Nov 1, 2026 • 5:48 PM EST (MCPS calendar verified; school email access unavailable)",
   "abiTonight": [
-    "📖 Read 20 minutes over the weekend",
-    "🔤 Practice the spelling packet; confirm return date after the Nov 2–3 closure"
+    "📖 Read 20 minutes today",
+    "🔤 Keep spelling packet handy; return date still needs teacher confirmation"
   ],
   "abiNext": [
-    "📅 Back to school Wed, Nov 4 (no school Mon–Tue)",
-    "🔤 Check new classroom spelling and homework instructions after the closure"
+    "📅 No school Mon–Tue, Nov 2–3; classes resume Wed, Nov 4",
+    "🔤 Check updated classroom spelling and homework instructions after closure"
   ],
   "raphiTonight": [
-    "📖 Read 20 minutes over the weekend",
-    "➗ Prepare Math Lesson 7, pages 59–60 — due Wed, Nov 4"
+    "📖 Read 20 minutes today",
+    "➗ Math Lesson 7, pages 59–60 — due Wed, Nov 4"
   ],
   "raphiNext": [
     "➗ Math Lesson 7, pages 59–60 — due Wed, Nov 4",
-    "📅 Back to school Wed, Nov 4 (no school Nov 2–3)"
+    "📅 No school Mon–Tue, Nov 2–3; classes resume Wed, Nov 4"
   ],
   "family": [
-    "🕒 Set clocks back one hour — Sun, Nov 1",
     "📅 No school — Mon–Tue, Nov 2–3 (arrange childcare)",
     "🍬 Optional candy donation drive — through Fri, Nov 6 (unopened candy; school office)",
     "🎈 Classroom parties — Fri, Nov 6 (volunteering/donations optional)",
-    "🌎 Geography Bowls — Nov 12–13 (qualifiers only)",
     "👩‍🏫 Parent-teacher conferences — Nov 23–24 (appointments unconfirmed)",
     "🕒 MCPS early-release days — Mon–Wed, Nov 23–25 (plan pickup)"
   ],
-  "parentAction": "Review both lunch accounts, arrange Nov 2–3 childcare, and verify ParentVUE/conference bookings. Zoo fee was paid; trip participation and slip were not confirmed.",
+  "parentAction": "No school Nov 2–3; arrange childcare. Verify lunch invoices, ParentVUE signature, and November conferences. Abi's trip fee was paid; permission slip and participation remain unconfirmed.",
   "status": [
-    "🚌 Transportation: No new ongoing bus-route changes in Oct 30 school emails; the earlier Green Bus delay was resolved.",
-    "🍎 Lunch: Oct 30 current-year cafeteria alerts for both children; older prior-year notices are separate repeat invoices. Check accounts privately.",
-    "📝 Forms: Zoo trip fee paid, but slip/participation not verified; Raphi's portal signature and conference bookings still unconfirmed. No new required supplies."
+    "🚌 Transportation: No continuing route change known from the last completed school-email review (Oct 30); newer emails could not be checked.",
+    "🍎 Lunch: Last confirmed alerts dated Oct 30; current and prior-year balances need a private account check. No new balance verified today.",
+    "📝 Forms: Zoo trip fee paid; signed permission and participation not confirmed. Raphi's ParentVUE signature and conference bookings unverified; no newer supplies update available."
   ],
   "parentActions": [
     {
-      "title": "This weekend",
+      "title": "Before Wednesday",
       "items": [
-        "Review both cafeteria accounts: Oct 30 alerts, plus separate older invoices.",
-        "Arrange childcare for the Nov 2–3 school closure."
+        "Arrange childcare for Mon–Tue, Nov 2–3 (no school).",
+        "Check Raphael's Lesson 7 math pages 59–60 for Wednesday."
       ]
     },
     {
       "title": "Still to verify",
       "items": [
+        "Review both lunch accounts and separate prior-year invoices.",
         "Book November parent-teacher conferences.",
         "Confirm Raphi's ParentVUE signature.",
-        "Abi's Oct 30 Zoo trip: fee paid; slip and participation unconfirmed."
+        "Abi's Zoo fee was paid; signed slip and trip participation remain unconfirmed."
       ]
     }
   ]
