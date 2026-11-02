@@ -1,44 +1,46 @@
 {
-  "revision": 26,
+  "revision": 27,
   "priority": "normal",
-  "date": "Sunday • November 1",
-  "updated": "Nov 1, 2026 • 5:48 PM EST (MCPS calendar verified; school email access unavailable)",
+  "date": "Monday • November 2",
+  "updated": "Nov 2, 2026 • 5:50 PM EST (MCPS calendar verified; new school emails unavailable)",
   "abiTonight": [
-    "📖 Read 20 minutes today",
-    "🔤 Keep spelling packet handy; return date still needs teacher confirmation"
+    "📅 No school Monday or Tuesday; classes resume Wednesday, Nov 4",
+    "📖 Read for 20 minutes if possible",
+    "🔤 Spelling packet return date still needs teacher confirmation"
   ],
   "abiNext": [
-    "📅 No school Mon–Tue, Nov 2–3; classes resume Wed, Nov 4",
-    "🔤 Check updated classroom spelling and homework instructions after closure"
+    "📅 Return to school — Wed, Nov 4",
+    "🔤 Ask teacher about the new spelling packet and homework schedule"
   ],
   "raphiTonight": [
-    "📖 Read 20 minutes today",
-    "➗ Math Lesson 7, pages 59–60 — due Wed, Nov 4"
+    "📅 No school Monday or Tuesday; classes resume Wednesday, Nov 4",
+    "📖 Read for 20 minutes if possible",
+    "➗ Check Math Lesson 7, pages 59–60 — due Wed, Nov 4 (last verified Oct 30)"
   ],
   "raphiNext": [
-    "➗ Math Lesson 7, pages 59–60 — due Wed, Nov 4",
-    "📅 No school Mon–Tue, Nov 2–3; classes resume Wed, Nov 4"
+    "➗ Math Lesson 7, pages 59–60 — due Wed, Nov 4 (not newly reconfirmed)",
+    "📅 Return to school — Wed, Nov 4"
   ],
   "family": [
-    "📅 No school — Mon–Tue, Nov 2–3 (arrange childcare)",
+    "📅 No school — Tue, Nov 3 (Election Day); return Wed, Nov 4",
     "🍬 Optional candy donation drive — through Fri, Nov 6 (unopened candy; school office)",
     "🎈 Classroom parties — Fri, Nov 6 (volunteering/donations optional)",
     "🌎 Geography Bowls — Nov 12–13 (qualifiers only)",
     "👩‍🏫 Parent-teacher conferences — Nov 23–24 (appointments unconfirmed)",
     "🕒 MCPS early-release days — Mon–Wed, Nov 23–25 (plan pickup)"
   ],
-  "parentAction": "No school Nov 2–3; arrange childcare. Verify lunch invoices, ParentVUE signature, and November conferences. Abi's trip fee was paid; permission slip and participation remain unconfirmed.",
+  "parentAction": "No school Tue, Nov 3; confirm childcare if needed. Check Raphi's math for Wednesday. Verify lunch accounts, ParentVUE signature and conference bookings. Zoo trip fee paid, participation/slip unconfirmed.",
   "status": [
-    "🚌 Transportation: No continuing route change known from the last completed school-email review (Oct 30); newer emails could not be checked.",
-    "🍎 Lunch: Last confirmed alerts dated Oct 30; current and prior-year balances need a private account check. No new balance verified today.",
-    "📝 Forms: Zoo trip fee paid; signed permission and participation not confirmed. Raphi's ParentVUE signature and conference bookings unverified; no newer supplies update available."
+    "🚌 Transportation: No ongoing route issue known from last completed Oct 30 email review; newer messages unavailable.",
+    "🍎 Lunch: Last reported alerts were Oct 30; current and prior-year balances have not been rechecked. Review privately.",
+    "📝 Forms: Zoo fee paid; trip participation/permission slip unconfirmed. Raphi's ParentVUE signature and conference bookings unverified. No newer supplies information."
   ],
   "parentActions": [
     {
       "title": "Before Wednesday",
       "items": [
-        "Arrange childcare for Mon–Tue, Nov 2–3 (no school).",
-        "Check Raphael's Lesson 7 math pages 59–60 for Wednesday."
+        "Tuesday, Nov 3: no school. Confirm childcare if needed.",
+        "Check Raphi's Lesson 7 math, pages 59–60, due Wednesday."
       ]
     },
     {
@@ -47,7 +49,7 @@
         "Review both lunch accounts and separate prior-year invoices.",
         "Book November parent-teacher conferences.",
         "Confirm Raphi's ParentVUE signature.",
-        "Abi's Zoo fee was paid; signed slip and trip participation remain unconfirmed."
+        "Abi's past Zoo trip: fee paid; signed slip and participation not confirmed."
       ]
     }
   ]
