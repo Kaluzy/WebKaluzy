@@ -1,56 +1,59 @@
 {
-  "revision": 28,
-  "priority": "normal",
-  "date": "Tuesday • November 3",
-  "updated": "Nov 3, 2026 • 5:40 PM EST (official MCPS calendar checked; new school emails unavailable)",
+  "revision": 29,
+  "priority": "important",
+  "date": "Wednesday • November 4",
+  "updated": "Nov 4, 2026 • evening EST (recent school emails reviewed)",
   "abiTonight": [
-    "📖 Read 20 minutes if possible",
-    "🎒 Prepare school bag for Wednesday, Nov 4 return",
-    "🔤 Spelling packet return date still unconfirmed (last email review Oct 30)"
+    "📖 Read independently for 20 minutes",
+    "➗ Grade 2 Math Unit 2 Lesson 12: complete the page; return Thu, Nov 5",
+    "🔤 Spelling choice board (10–15 minutes); practice contractions",
+    "🎒 Return any unfinished classwork the next school day"
   ],
   "abiNext": [
-    "🏫 Return to school — Wed, Nov 4",
-    "🔤 Confirm spelling packet and current homework schedule with teacher"
+    "➗ Thu, Nov 5: Unit 2 Lesson 13 math page; return Fri, Nov 6",
+    "🎈 Fri, Nov 6: class party; no math homework assigned for Friday",
+    "🔤 Mon, Nov 9: contraction spelling test (per class newsletter)"
   ],
   "raphiTonight": [
-    "➗ Check Math Lesson 7, pages 59–60 — due Wed, Nov 4 (last verified Oct 30)",
-    "📖 Read 20 minutes if possible",
-    "🎒 Prepare for Wednesday school return"
+    "📖 Read for 20 minutes",
+    "🎒 Check take-home folder/agenda for new Grade 4 assignments",
+    "🎈 Fri, Nov 6: class party (donations and volunteering optional)"
   ],
   "raphiNext": [
-    "➗ Math Lesson 7, pages 59–60 — Wed, Nov 4 (not reconfirmed in new emails)",
-    "🏫 Return to school — Wed, Nov 4"
+    "📚 Watch for next Grade 4 homework schedule; none newer was confirmed",
+    "🌱 Nov 9–13: optional Wellness Spirit Week clothing themes"
   ],
   "family": [
-    "🏫 School resumes — Wed, Nov 4 (MCPS calendar)",
-    "🍬 Optional candy donation drive — through Fri, Nov 6 (unopened, commercially packaged)",
-    "🎈 Classroom parties — Fri, Nov 6 (volunteering/donations optional)",
-    "🌎 Geography Bowls — Nov 12–13 (qualifiers only)",
-    "👩‍🏫 Parent-teacher conferences — Nov 23–24 (appointments unconfirmed)",
+    "🏀 Rockville winter basketball signup closes — Thu, Nov 5 (optional)",
+    "🗣️ Farmland PTA communication meeting — Thu, Nov 5 • 7 PM (optional Zoom)",
+    "🎈 Classroom parties and optional candy drive deadline — Fri, Nov 6",
+    "🌱 Wellness Spirit Week — Nov 9–13 (optional themed clothing)",
+    "📋 Student Entrepreneur Night applications due — Tue, Nov 10 (optional)",
+    "🌎 Geography Bowl — Nov 12–13 (qualifiers only)",
+    "👩‍🏫 Parent-teacher conferences — Nov 23–24 (book appointments)",
     "🕒 MCPS early-release days — Nov 23–25 (plan pickup)",
     "🦃 Thanksgiving school break — Nov 26–27"
   ],
-  "parentAction": "Wednesday, Nov 4: school resumes. Check Raphi's math due Wednesday. Review lunch accounts, conference bookings and ParentVUE signature; Abi's Zoo fee paid, permission/participation not verified.",
+  "parentAction": "Check cafeteria notices and Abi's new Grade 2 math homework. Verify conference bookings and Raphi's ParentVUE signature.",
   "status": [
-    "🚌 Transportation: No lasting route issue reported through last email review Oct 30; newer messages inaccessible.",
-    "🍎 Lunch: Latest itemized alerts dated Oct 30; current and prior-year charges have not been rechecked. Review privately.",
-    "📝 Forms: Zoo fee paid; signed permission/participation not verified. Raphi's ParentVUE signature and conferences pending verification; no new supplies confirmation."
+    "🚌 Transportation: Gold Bus departed school late Nov 4; check only if your child uses that bus. No continuing route change verified.",
+    "🍎 Lunch: Nov 4 alerts report negative cafeteria balances for both; current and prior-year amounts must be checked separately. No payment confirmed.",
+    "📝 Forms: Grade 2 math pages now assigned. Conferences and Raphi's ParentVUE signature unconfirmed; Zoo trip fee paid but slip/participation unverified."
   ],
   "parentActions": [
     {
-      "title": "Before school Wednesday",
+      "title": "Do now",
       "items": [
-        "Prepare bags for the Nov 4 return.",
-        "Check Raphi's Math Lesson 7, pages 59–60, due Wednesday."
+        "Review current and prior-year cafeteria notices privately; payment not verified.",
+        "Abi: complete Unit 2 Lesson 12 math page; return Thursday."
       ]
     },
     {
-      "title": "Still to verify",
+      "title": "Waiting for confirmation",
       "items": [
-        "Review both lunch accounts and separate prior-year invoices privately.",
-        "Book November parent-teacher conferences.",
-        "Confirm Raphi's ParentVUE signature.",
-        "Abi's past Zoo trip: fee paid; signed slip/participation not verified."
+        "Schedule November conferences for both children.",
+        "Verify Raphi's ParentVUE signature.",
+        "Close out Abi's October Zoo trip paperwork if needed (fee paid; participation/slip unconfirmed)."
       ]
     }
   ]
