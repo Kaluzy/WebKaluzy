@@ -1,61 +1,57 @@
 {
-  "revision": 30,
+  "revision": 31,
   "priority": "important",
-  "date": "Thursday • November 5",
-  "updated": "Nov 5, 2026 • evening EST (school and activity emails reviewed)",
+  "date": "Friday • November 6",
+  "updated": "Nov 6, 2026 • 5:45 PM EST (school and activity emails reviewed)",
   "abiTonight": [
     "📖 Read independently for 20 minutes",
-    "➗ Grade 2 Math Unit 2 Lesson 13: complete tonight; return Fri, Nov 6",
-    "🔤 Spelling choice board 10–15 minutes; practice contractions",
-    "🎒 Return unfinished classwork the next school day"
+    "🔤 Practice contractions for Monday, Nov 9 spelling test",
+    "🎒 Check folder for any unfinished work to return Monday"
   ],
   "abiNext": [
-    "🎈 Fri, Nov 6: class party; no Friday math homework assigned",
     "🔤 Mon, Nov 9: contractions spelling test (earlier newsletter)",
-    "👩‍🏫 Wed, Nov 11 • 4:30–5:15 PM: Ms. Lee's mini Back to School Night"
+    "👩‍🏫 Wed, Nov 11 • 4:30–5:15 PM: Ms. Lee mini Back to School Night"
   ],
   "raphiTonight": [
     "📖 Read independently for 20 minutes",
-    "🎒 Check folder/agenda for any new Grade 4 homework",
-    "🎈 Fri, Nov 6: class party (optional donations)"
+    "🎒 Check folder/agenda for new Grade 4 homework"
   ],
   "raphiNext": [
-    "⚽ MSI Gold U10 practice evaluation requested for Wed, Nov 11 • 5:15 PM; coach confirmation and free status pending",
-    "📚 Watch for new Grade 4 homework instructions",
-    "🌱 Nov 9–13: optional Wellness Spirit Week clothing themes"
+    "⚽ Wed, Nov 11 • 5:15 PM: MSI Gold U10 free practice evaluation requested; coach attendance confirmation pending",
+    "⚽ SAM winter Saturday 11 AM skills clinic registration recorded; payment and assistance pending",
+    "📚 Watch for new Grade 4 homework instructions"
   ],
   "family": [
-    "🎈 Classroom parties and optional candy drive deadline — Fri, Nov 6",
     "🌱 Wellness Spirit Week — Nov 9–13 (optional themed clothing)",
     "📋 Student Entrepreneur Night applications due — Tue, Nov 10 (optional)",
     "👩‍🏫 Ms. Lee mini Back to School Night — Wed, Nov 11 • 4:30–5:15 PM",
     "⚽ Raphi MSI U10 practice evaluation requested — Wed, Nov 11 • 5:15 PM (awaiting coach confirmation)",
-    "🌎 Geography Bowl — Nov 12–13 (qualifiers only)",
+    "🌎 Geography Bowl — Nov 12 (Grade 3/4), Nov 13 (Grade 5); participants only",
     "👩‍🏫 Parent-teacher conferences — Nov 23–24 (book appointments)",
     "🕒 MCPS early-release days — Nov 23–25 (plan pickup)",
     "🦃 Thanksgiving school break — Nov 26–27"
   ],
-  "parentAction": "Review cafeteria invoices privately; finish Abi's Thursday math sheet. Confirm conferences, portal signature and Raphi's soccer evaluation.",
+  "parentAction": "Review cafeteria notices; follow up on unpaid soccer clinic and pending assistance; confirm soccer evaluation and conferences.",
   "status": [
-    "🚌 Transportation: No new ongoing bus-route change verified; Nov 4 Gold Bus notice was temporary.",
-    "🍎 Lunch: Nov 5 repeat alerts for both children; current and prior-year invoices remain separate, with no payment verified.",
-    "📝 Forms: Abi's Zoo fee paid but permission slip unverified; conferences and Raphi's ParentVUE signature pending. Soccer evaluation requested, not confirmed."
+    "🚌 Transportation: No new ongoing bus-route change reported in reviewed messages.",
+    "🍎 Lunch: Nov 6 cafeteria alerts for both children; payment unconfirmed. Current and prior-year charges are separate.",
+    "📝 Forms: Zoo trip fee paid; signed permission unverified. Conferences and Raphi ParentVUE signature pending. Soccer clinic registered, unpaid; free evaluation awaiting coach confirmation."
   ],
   "parentActions": [
     {
       "title": "Do now",
       "items": [
-        "Abi: complete Unit 2 Lesson 13 math page; return Friday.",
-        "Review current-year and prior-year cafeteria invoices privately; payment unconfirmed."
+        "Review cafeteria balances and prior-year invoices privately; payment unconfirmed.",
+        "SAM winter skills clinic registered, but payment and assistance response pending."
       ]
     },
     {
       "title": "Waiting for confirmation",
       "items": [
-        "Raphi: Nov 11 MSI Gold practice requested; await coach confirmation and whether evaluation is free.",
-        "Book November parent-teacher conferences; Ms. Lee also offers a separate meeting.",
-        "Verify Raphi's ParentVUE signature.",
-        "Close out Abi's October Zoo paperwork if needed (fee paid; signed slip/participation unverified)."
+        "Raphi: Nov 11 MSI Gold evaluation is free; coach attendance confirmation still pending.",
+        "Book November parent-teacher conferences; verify Raphi ParentVUE signature.",
+        "Abi Zoo fee paid; signed slip/participation not independently verified.",
+        "Bethesda winter 5v5 free-agent placement pending; full refund promised if no team found."
       ]
     }
   ]
