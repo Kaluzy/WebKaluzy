@@ -1,15 +1,15 @@
 {
-  "revision": 34,
+  "revision": 35,
   "priority": "important",
-  "date": "Monday • November 9",
-  "updated": "Nov 9, 2026 • 5:45 PM EST (school and activity emails reviewed)",
+  "date": "Tuesday • November 10",
+  "updated": "Nov 10, 2026 • 5:49 PM EST (school and activity emails reviewed)",
   "abiTonight": [
     "📖 Read 20 minutes",
-    "➗ Tue, Nov 10: Math 2.15 pp. 57–58 (follow teacher instructions)",
-    "🔤 Check spelling packet and practice"
+    "➗ Wed, Nov 11: Math 2.16 pp. 59–60 (follow teacher instructions)",
+    "🔤 Practice spelling and check packet"
   ],
   "abiNext": [
-    "➗ Tue, Nov 10: Math 2.15 pp. 57–58; Wed, Nov 11: Math 2.16 pp. 59–60",
+    "➗ Wed, Nov 11: Math 2.16 pp. 59–60; Thu, Nov 12: no math; Fri, Nov 13: Math 2.17 pp. 61–62",
     "➗ Thu, Nov 12: no math; Fri, Nov 13: Math 2.17 pp. 61–62",
     "👩‍🏫 Wed, Nov 11 • 4:30–5:15 PM: Ms. Lee mini Back to School Night",
     "🎵 Tue, Nov 17: Grade 2 Strathmore field trip; permission/payment details not confirmed",
@@ -17,40 +17,41 @@
   ],
   "raphiTonight": [
     "📖 Read independently for 20 minutes",
-    "🎒 Check Grade 4 homework folder and report-card updates"
+    "🎒 Check homework folder and prepare for class on time"
   ],
   "raphiNext": [
     "⚽ Wed, Nov 11 • 5:15 PM: MSI Gold U10 free practice evaluation requested; coach attendance confirmation pending",
     "📚 Watch for new Grade 4 homework instructions",
-    "⚽ SAM clinic: $190 registration unpaid; spot held through Nov 13. $160 Rec Ready alternative offered, switch not confirmed."
+    "⚽ SAM clinic: $190 registration unpaid; spot held through Nov 13. $160 Rec Ready alternative offered, switch not confirmed.",
+    "⚽ MSI winter indoor: waitlisted, not enrolled; MSA Ritchie Park winter class has availability, registration not confirmed"
   ],
   "family": [
-    "🌱 Wellness Spirit Week Nov 10–13: Tue team gear; Wed green; Thu favorite hat; Fri Farmland colors (optional)",
+    "🌱 Wellness Spirit Week Nov 11–13: Wed green; Thu favorite hat; Fri Farmland colors (optional)",
     "📊 Report cards sent home this week; contact teacher if not received by Fri, Nov 13",
-    "💻 Mon, Nov 9 • 6–7 PM: optional MCPS elementary math webinar (recording planned)",
-    "📋 Student Entrepreneur Night applications due — Tue, Nov 10 (optional)",
     "👩‍🏫 Ms. Lee mini Back to School Night — Wed, Nov 11 • 4:30–5:15 PM",
     "⚽ Raphi MSI U10 practice evaluation requested — Wed, Nov 11 • 5:15 PM (awaiting coach confirmation)",
     "🌎 Geography Bowl — Nov 12 (Grade 3/4), Nov 13 (Grade 5); participants only",
     "🎵 Grade 2 Strathmore field trip — Tue, Nov 17 (confirm permission and fee)",
     "👩‍🏫 Parent-teacher conferences — Nov 23–24 (book appointments)",
     "🕒 MCPS early-release days — Nov 23–25 (plan pickup)",
-    "🦃 Thanksgiving school break — Nov 26–27"
+    "🦃 Thanksgiving school break — Nov 26–27",
+    "📋 Federal Impact Aid Survey: if federally connected, complete ParentVUE survey by Dec 11"
   ],
-  "parentAction": "Review cafeteria alerts and report cards; decide SAM clinic by Nov 13; prepare Abi Tuesday math.",
+  "parentAction": "Review cafeteria alerts; prepare Wednesday homework and activities; decide SAM clinic by Nov 13.",
   "status": [
-    "🚌 Transportation: No new ongoing route change identified.",
-    "🍎 Lunch: Nov 9 new negative-balance alerts for both children; review and pay privately. Prior-year invoices separate.",
+    "🚌 Transportation: Nov 10 Green Bus delayed about 10 minutes; school later confirmed boarding/departure. Check route if applicable.",
+    "🍎 Lunch: Nov 10 negative-balance alerts for both children; review and pay privately. Prior-year invoices separate.",
     "📝 Forms: Strathmore Nov 17 permission/fee unconfirmed; October Zoo fee paid but slip unverified; conferences and Raphi ParentVUE pending."
   ],
   "parentActions": [
     {
       "title": "Do now",
       "items": [
-        "Review both cafeteria accounts privately; Nov 9 new negative-balance alerts, payment unconfirmed.",
-        "SAM: spot held until Nov 13; no financial aid/payment plan; $160 Rec Ready switch offered, not confirmed.",
+        "Review both cafeteria accounts privately; Nov 10 alerts, payment unconfirmed.",
+        "SAM: spot held until Nov 13; no financial aid/payment plan; Rec Ready alternative not confirmed.",
         "Check report cards by Fri, Nov 13; follow up with teachers if missing.",
-        "Abi: Tuesday Math 2.15 pp. 57–58; daily reading."
+        "Abi: Wednesday Math 2.16 pp. 59–60; daily reading.",
+        "Check Green Bus status if your child uses that route."
       ]
     },
     {
@@ -61,7 +62,9 @@
         "Book November conferences and verify Raphi ParentVUE signature.",
         "Abi October Zoo fee paid; signed slip/participation not independently verified.",
         "Farmland after-school soccer: PTA referred inquiry to program provider; availability not confirmed.",
-        "Bethesda winter 5v5: parent-coached games only; team placement pending, refund promised if not placed."
+        "Bethesda winter 5v5: parent-coached games only; team placement pending, refund promised if not placed.",
+        "MSI winter indoor waitlist only; MSA Ritchie Park has spots, but registration not confirmed.",
+        "Federal Impact Aid survey due Dec 11 only if household is federally connected."
       ]
     }
   ]
