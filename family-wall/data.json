@@ -1,64 +1,65 @@
 {
-  "revision": 36,
+  "revision": 37,
   "priority": "important",
-  "date": "Wednesday • November 11",
-  "updated": "Nov 11, 2026 • 5:47 PM EST (school and activity emails reviewed)",
+  "date": "Thursday • November 12",
+  "updated": "Nov 12, 2026 • 5:41 PM EST (school and activity messages reviewed)",
   "abiTonight": [
     "📖 Read 20 minutes",
-    "➗ Thu, Nov 12: no scheduled math homework",
-    "🔤 Practice spelling and check packet"
+    "🔤 Practice spelling and check packet",
+    "➗ Fri, Nov 13: Math 2.17 pp. 61–62"
   ],
   "abiNext": [
-    "➗ Thu, Nov 12: no math; Fri, Nov 13: Math 2.17 pp. 61–62",
-    "🎵 Tue, Nov 17: Grade 2 Strathmore field trip; permission/payment details not confirmed",
-    "➗ Nov 16–20: Math 2.18 pp. 63–64; 2.19 pp. 65–66; 2.20 pp. 67–68; 2.21 pp. 69–70; 2.22 pp. 70–71 (daily sequence)"
+    "➗ Fri, Nov 13: Math 2.17 pp. 61–62",
+    "🎵 Tue, Nov 17: Grade 2 Strathmore trip; permission/payment unconfirmed",
+    "➗ Nov 16–20: Math 2.18 pp. 63–64; 2.19 pp. 65–66; 2.20 pp. 67–68; 2.21 pp. 69–70; 2.22 pp. 70–71"
   ],
   "raphiTonight": [
     "📖 Read independently for 20 minutes",
     "🎒 Check homework folder and prepare for class on time"
   ],
   "raphiNext": [
-    "📚 Watch for new Grade 4 homework instructions",
-    "⚽ SAM Skills Clinic: payment reminder says due Wed, Nov 11 by 9 PM or spot may be lost; payment not confirmed. Earlier provider correspondence mentioned Nov 13—verify before relying on that date.",
-    "⚽ MSI winter indoor: waitlisted, not enrolled; MSA Ritchie Park winter class has availability, registration not confirmed"
+    "📚 Check for new Grade 4 assignments",
+    "⚽ SAM clinic: unpaid registration may be removed Fri Nov 13 at 5 PM; confirm payment before attending Sat Nov 14, 11 AM",
+    "⚽ MSI winter indoor waitlisted, not enrolled; MSA Ritchie Park registration unconfirmed"
   ],
   "family": [
-    "🌱 Wellness Spirit Week Nov 12–13: Thu favorite hat; Fri Farmland colors (optional)",
-    "📊 Report cards sent home this week; contact teacher if not received by Fri, Nov 13",
-    "🌎 Geography Bowl — Nov 12 (Grade 3/4), Nov 13 (Grade 5); participants only",
-    "🎵 Grade 2 Strathmore field trip — Tue, Nov 17 (confirm permission and fee)",
-    "👩‍🏫 Parent-teacher conferences — Nov 23–24 (book appointments)",
-    "🕒 MCPS early-release days — Nov 23–25 (plan pickup)",
-    "🦃 Thanksgiving school break — Nov 26–27",
-    "📋 Federal Impact Aid Survey: if federally connected, complete ParentVUE survey by Dec 11"
+    "🎨 Fri, Nov 13: Farmland colors Spirit Day (optional); report-card/progress-report check",
+    "🌎 Fri, Nov 13: Geography Bowl (Grade 5 participants)",
+    "⚽ Sat, Nov 14: SAM Skills Clinic 11 AM, only if payment/enrollment confirmed",
+    "🎵 Tue, Nov 17: Grade 2 Strathmore field trip (permission/fee unconfirmed)",
+    "👩‍🏫 Nov 23–24: Parent-teacher conferences (book appointments)",
+    "🕒 Nov 23–25: MCPS early-release days (plan pickup)",
+    "🦃 Nov 26–27: Thanksgiving school closure",
+    "📋 Dec 11: Federal Impact Aid Survey only if federally connected"
   ],
-  "parentAction": "Urgent: confirm SAM clinic payment decision by tonight 9 PM; review cafeteria balances privately; check report cards and field-trip paperwork.",
+  "parentAction": "Urgent: SAM clinic payment/enrollment deadline Fri Nov 13 at 5 PM; review lunch accounts privately; check ParentVUE report cards and school messages during Outlook outage.",
   "status": [
-    "🚌 Transportation: Nov 10 Green Bus delay resolved; no new Nov 11 route issue verified.",
-    "🍎 Lunch: Nov 11 negative-balance reminders repeated for both children; payment unconfirmed. Prior-year invoices separate.",
-    "📝 Forms: Strathmore Nov 17 permission/fee unconfirmed; October Zoo fee paid but slip unverified; conferences and Raphi ParentVUE pending."
+    "🚌 Transportation: no new Nov 12 route disruption verified.",
+    "🍎 Lunch: Nov 12 alerts repeat prior balances for both children; prior-year invoices separate; payment unconfirmed.",
+    "📝 Forms: Nov 17 Strathmore permission/fee unconfirmed; October Zoo fee paid, slip unverified; conferences and Raphi ParentVUE pending."
   ],
   "parentActions": [
     {
       "title": "Do now",
       "items": [
-        "SAM clinic payment reminder says Wed Nov 11 by 9 PM or spot may be lost; earlier Nov 13 hold conflicts. Confirm immediately; no payment verified.",
-        "Review both cafeteria accounts privately; Nov 11 repeated alerts, payment unconfirmed.",
-        "Check report cards by Fri, Nov 13; follow up with teachers if missing.",
-        "Abi: Thu Nov 12 no scheduled math; Fri Nov 13 Math 2.17 pp. 61–62."
+        "SAM winter clinic: provider now specifies Fri Nov 13, 5 PM payment cutoff; unpaid enrollment removed. Confirm payment or decline before Sat 11 AM clinic.",
+        "Check first marking-period report cards in ParentVUE now; K–8 progress reports expected by Fri Nov 13.",
+        "Review cafeteria accounts privately; Nov 12 current-year and separate prior-year reminders repeat previous balances.",
+        "MCPS/Farmland Outlook email outage ongoing Nov 12: use ParentSquare or school phone for urgent school contact.",
+        "Abi: Fri Nov 13 Math 2.17 pp. 61–62; optional school-colors Spirit Day."
       ]
     },
     {
       "title": "Waiting for confirmation",
       "items": [
-        "Raphi: MSI Gold Nov 11 evaluation attendance and coach confirmation not verified; follow up if needed.",
-        "Confirm Grade 2 Nov 17 Strathmore field-trip permission and fee.",
+        "Confirm Grade 2 Nov 17 Strathmore permission and fee; no payment verified.",
         "Book November conferences and verify Raphi ParentVUE signature.",
-        "Abi October Zoo fee paid; signed slip/participation not independently verified.",
-        "Farmland after-school soccer: PTA referred inquiry to program provider; availability not confirmed.",
-        "Bethesda winter 5v5: parent-coached games only; team placement pending, refund promised if not placed.",
-        "MSI winter indoor waitlist only; MSA Ritchie Park has spots, but registration not confirmed.",
-        "Federal Impact Aid survey due Dec 11 only if household is federally connected."
+        "Abi October Zoo trip fee paid; signed permission slip/participation not independently verified.",
+        "Raphi MSI Gold Nov 11 evaluation attendance/coach confirmation unverified.",
+        "Farmland after-school soccer availability not confirmed; PTA referred to provider.",
+        "Bethesda winter 5v5 team placement pending; payment unconfirmed, refund promised if not placed.",
+        "MSI winter indoor waitlist only; MSA Ritchie Park registration not confirmed.",
+        "Federal Impact Aid survey due Dec 11 only if federally connected."
       ]
     }
   ]
