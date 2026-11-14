@@ -1,40 +1,42 @@
 {
-  "revision": 38,
+  "revision": 39,
   "priority": "important",
-  "date": "Friday • November 13",
-  "updated": "Nov 13, 2026 • 5:46 PM EST (school and activity messages reviewed)",
+  "date": "Saturday • November 14",
+  "updated": "Nov 14, 2026 • 5:49 PM EST (school and activity messages reviewed)",
   "abiTonight": [
-    "📖 Read 20 minutes",
-    "🔤 Practice spelling; check next packet Monday",
-    "➗ Mon Nov 16: Math 2.18 pp. 63–64"
+    "📖 Read 20 minutes; practice spelling",
+    "🔤 Mon Nov 16: er/or/ar spelling test; new packet",
+    "➗ Mon Nov 16: Math 2.18 pp. 63–64 (return weekly math and spelling packets Monday)"
   ],
   "abiNext": [
     "➗ Nov 16–20: Math 2.18 pp. 63–64; 2.19 pp. 65–66; 2.20 pp. 67–68; 2.21 pp. 69–70; 2.22 pp. 70–71",
-    "🎵 Tue Nov 17: Strathmore field trip; permission and fee unconfirmed",
-    "➕ Thu Nov 19: Grade 2 math assessment (addition/subtraction within 100)"
+    "🎵 Tue Nov 17: Strathmore trip — signed permission slip REQUIRED; fee unconfirmed",
+    "➕ Thu Nov 19: Grade 2 math assessment (addition/subtraction within 100)",
+    "➗ Nov 23: Math 3.9/3.10 pp. 87,90; spelling test. Nov 24: 3.11 pp. 91–92; Nov 25: 3.12 pp. 93–94 optional"
   ],
   "raphiTonight": [
-    "📖 Read independently for 20 minutes",
-    "➗ Practice fractions and mixed numbers for Nov 20 assessment"
+    "📖 Read 20 minutes daily",
+    "➗ Prepare fractions, mixed numbers and line plots for next week's Unit 3 assessment"
   ],
   "raphiNext": [
-    "➗ Fri Nov 20: Grade 4 math district assessment (fractions and mixed numbers)",
-    "⚽ SAM clinic Sat Nov 14 at 11 AM: payment cutoff passed; attendance only if provider confirms enrollment",
+    "➗ Grade 4 homework due Tue Nov 17: Lesson 13 pp. 71–72; Wed Nov 18: Lesson 14 pp. 73–74; Thu Nov 19: Lesson 15 pp. 75–76; Fri Nov 20: Lesson 16 pp. 77–78",
+    "➗ Fri Nov 20: Grade 4 district fractions assessment; Unit 3 end assessment also planned next week",
     "⚽ MSI winter indoor waitlisted; MSA Ritchie Park registration unconfirmed"
   ],
   "family": [
+    "📚 Mon Nov 16: Enriching Literacy Night (details/time not yet confirmed)",
     "➕ Thu Nov 19: Grade 2 math assessment; Fri Nov 20: Grade 4 fractions assessment",
-    "⚽ Sat, Nov 14: SAM Skills Clinic 11 AM, only if payment/enrollment confirmed",
     "🎵 Tue, Nov 17: Grade 2 Strathmore field trip (permission/fee unconfirmed)",
     "👩‍🏫 Nov 23–24: Parent-teacher conferences (book appointments)",
     "🕒 Nov 23–25: MCPS early-release days (plan pickup)",
     "🦃 Nov 26–27: Thanksgiving school closure",
-    "📋 Dec 11: Federal Impact Aid Survey only if federally connected"
+    "📋 Dec 11: Federal Impact Aid Survey only if federally connected",
+    "➗ Mon Nov 30: Math Curriculum Night (time not yet confirmed)"
   ],
-  "parentAction": "SAM clinic 5 PM payment deadline has passed; confirm enrollment before attending Saturday. Review report cards, lunch accounts, and Strathmore permission privately.",
+  "parentAction": "Return signed report-card envelope; verify Abi's signed Strathmore trip slip before Nov 17. Review next week's math homework and lunch accounts privately.",
   "status": [
     "🚌 Transportation: no new Nov 13 route disruption verified.",
-    "🍎 Lunch: Nov 13 alerts repeat existing current-year balances; older invoices separate; payment unconfirmed.",
+    "🍎 Lunch: Nov 14 generic refill reminder; no updated balance. Nov 13 itemized alerts remain latest; payment unconfirmed.",
     "📧 MCPS Outlook service being restored Nov 13; intermittent disruption possible.",
     "📝 Forms: Strathmore Nov 17 permission/fee unconfirmed; October Zoo fee paid but slip unverified; conferences and Raphi ParentVUE pending."
   ],
@@ -42,24 +44,26 @@
     {
       "title": "Do now",
       "items": [
-        "SAM clinic: Nov 13 5 PM payment deadline passed; $190 payment unconfirmed. Verify registration with provider before Sat Nov 14 class.",
+        "Confirm Abi's signed Nov 17 Strathmore permission slip was turned in; teacher says children cannot attend without it. Fee still unconfirmed.",
+        "Return signed report-card envelope to Abi's teacher; check both children's reports in ParentVUE.",
         "Check first marking-period report cards and K–8 progress reports in ParentVUE; follow up if missing.",
         "Review cafeteria accounts privately; Nov 13 alerts repeat previous balances; prior-year invoices separate.",
         "MCPS Outlook restoration underway; ParentSquare remains an option if email is disrupted.",
-        "Prepare Abi for Nov 19 math assessment (coins, addition/subtraction to 100) and Raphi for Nov 20 fractions assessment."
+        "Prepare Abi for Nov 19 math assessment (coins, addition/subtraction to 100) and Raphi for Nov 20 fractions assessment.",
+        "Raphi: Unit 3 math homework due Nov 17–20; no homework due Nov 16. Abi: weekly math/spelling packets returned Mondays."
       ]
     },
     {
       "title": "Waiting for confirmation",
       "items": [
-        "Confirm Grade 2 Nov 17 Strathmore permission and fee; no payment verified.",
         "Book November conferences and verify Raphi ParentVUE signature.",
         "Abi October Zoo trip fee paid; signed permission slip/participation not independently verified.",
         "Raphi MSI Gold Nov 11 evaluation attendance/coach confirmation unverified.",
         "Farmland after-school soccer availability not confirmed; PTA referred to provider.",
         "Bethesda winter 5v5 team placement pending; payment unconfirmed, refund promised if not placed.",
         "MSI winter indoor waitlist only; MSA Ritchie Park registration not confirmed.",
-        "Federal Impact Aid survey due Dec 11 only if federally connected."
+        "Federal Impact Aid survey due Dec 11 only if federally connected.",
+        "SAM clinic Nov 14 session elapsed; payment/enrollment and attendance remain unverified. Confirm status with provider before any future session."
       ]
     }
   ]
