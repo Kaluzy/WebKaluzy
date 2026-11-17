@@ -1,59 +1,55 @@
 {
-  "revision": 40,
+  "revision": 41,
   "priority": "important",
-  "date": "Monday • November 16",
-  "updated": "Nov 16, 2026 • 5:45 PM EST (school messages reviewed)",
+  "date": "Tuesday • November 17",
+  "updated": "Nov 17, 2026 • 5:43 PM EST (school messages reviewed)",
   "abiTonight": [
     "📖 Read 20 minutes; practice spelling",
-    "➗ Tue Nov 17: Math 2.19 pp. 65–66",
-    "🎵 Tue Nov 17: Strathmore field trip — signed permission slip REQUIRED; payment unconfirmed"
+    "➗ Wed Nov 18: Math 2.20 pp. 67–68",
+    "➕ Thu Nov 19: Grade 2 math assessment — practice coins and subtraction"
   ],
   "abiNext": [
-    "➗ Nov 17–20: Math 2.19 pp. 65–66; 2.20 pp. 67–68; 2.21 pp. 69–70; 2.22 pp. 70–71",
-    "🎵 Tue Nov 17: Strathmore trip — signed permission slip REQUIRED; fee unconfirmed",
-    "➕ Thu Nov 19: Grade 2 math assessment (addition/subtraction within 100)",
+    "➗ Wed Nov 18: Math 2.20 pp. 67–68; Thu Nov 19: 2.21 pp. 69–70; Fri Nov 20: 2.22 pp. 70–71",
+    "➕ Thu Nov 19: Grade 2 math assessment (coins, addition/subtraction within 100)",
     "➗ Nov 23: Math 3.9/3.10 pp. 87,90; spelling test. Nov 24: 3.11 pp. 91–92; Nov 25: 3.12 pp. 93–94 optional"
   ],
   "raphiTonight": [
     "📖 Read 20 minutes daily",
-    "➗ Tue Nov 17: Lesson 13 pp. 71–72",
+    "➗ Wed Nov 18: Lesson 14 pp. 73–74",
     "➗ Practice fractions, mixed numbers and line plots for Nov 20 assessment"
   ],
   "raphiNext": [
-    "➗ Grade 4 homework due Tue Nov 17: Lesson 13 pp. 71–72; Wed Nov 18: Lesson 14 pp. 73–74; Thu Nov 19: Lesson 15 pp. 75–76; Fri Nov 20: Lesson 16 pp. 77–78",
-    "➗ Fri Nov 20: Grade 4 district fractions assessment; Unit 3 end assessment also planned next week",
+    "➗ Grade 4 homework due Wed Nov 18: Lesson 14 pp. 73–74; Thu Nov 19: Lesson 15 pp. 75–76; Fri Nov 20: Lesson 16 pp. 77–78",
+    "➗ Fri Nov 20: Grade 4 district fractions assessment; Unit 3 end assessment also planned this week",
     "⚽ MSI winter indoor waitlisted; MSA Ritchie Park registration unconfirmed"
   ],
   "family": [
-    "📚 Tonight Nov 16, 6:30–7:30 PM: optional adult literacy enrichment night at school (RSVP requested)",
     "➕ Thu Nov 19: Grade 2 math assessment; Fri Nov 20: Grade 4 fractions assessment",
-    "🎵 Tue, Nov 17: Grade 2 Strathmore field trip (permission/fee unconfirmed)",
     "👩‍🏫 Nov 23–24: Parent-teacher conferences (book appointments)",
     "🕒 Nov 23–25: MCPS early-release days (plan pickup)",
     "🦃 Nov 26–27: Thanksgiving school closure",
     "📋 Dec 11: Federal Impact Aid Survey only if federally connected",
     "➗ Mon Nov 30: Math Curriculum Night (time not yet confirmed)",
     "🎁 Wed Nov 25 morning: optional BINGO prize donations due",
-    "🎨 Tue Dec 1: optional PTA Reflections art submission deadline"
+    "🎨 Tue Dec 1: optional PTA Reflections art submission deadline",
+    "🗣️ Optional MCPS Culture & Climate Survey extended to Sun Nov 29"
   ],
-  "parentAction": "Confirm Abi's signed Strathmore permission slip before Tue Nov 17; review lunch accounts privately; prepare both children for math assessments.",
+  "parentAction": "Review lunch accounts privately; prepare Abi for Nov 19 and Raphi for Nov 20 math assessments; confirm Strathmore permission and participation if still unresolved.",
   "status": [
-    "🍎 Lunch: Nov 16 school alerts show updated negative balances; review privately and verify payment (no amounts on public wall).",
+    "🍎 Lunch: Nov 17 generic low-funds reminder has no new balance; Nov 16 negative-balance alerts remain latest itemized figures, payment unverified.",
     "🚌 Transportation: no new ongoing disruption reported in recent messages.",
-    "📧 MCPS Outlook service being restored Nov 13; intermittent disruption possible.",
-    "📝 Forms: Strathmore Nov 17 permission/fee unconfirmed; October Zoo fee paid but slip unverified; conferences and Raphi ParentVUE pending."
+    "📝 Forms: Nov 17 Strathmore permission/fee and attendance unconfirmed; October Zoo fee paid but slip unverified; conferences and Raphi ParentVUE pending."
   ],
   "parentActions": [
     {
       "title": "Do now",
       "items": [
-        "Confirm Abi's signed Nov 17 Strathmore permission slip was turned in; teacher says children cannot attend without it. Fee still unconfirmed.",
         "Return signed report-card envelope to Abi's teacher; check both children's reports in ParentVUE.",
         "Check first marking-period report cards and K–8 progress reports in ParentVUE; follow up if missing.",
         "Review cafeteria accounts privately; Nov 16 alerts show outstanding balances, payment not verified; older invoices separate.",
-        "MCPS Outlook restoration underway; ParentSquare remains an option if email is disrupted.",
         "Prepare Abi for Nov 19 math assessment (coins, addition/subtraction to 100) and Raphi for Nov 20 fractions assessment.",
-        "Raphi: Lesson 13 pp. 71–72 due Tue Nov 17; Abi: Math 2.19 pp. 65–66 Tue Nov 17."
+        "Verify whether Abi attended Nov 17 Strathmore trip; signed permission and fee were not confirmed. Do not mark complete without confirmation.",
+        "Raphi: Lesson 14 pp. 73–74 due Wed Nov 18; Abi: Math 2.20 pp. 67–68 Wed Nov 18."
       ]
     },
     {
@@ -67,6 +63,7 @@
         "MSI winter indoor waitlist only; MSA Ritchie Park registration not confirmed.",
         "Federal Impact Aid survey due Dec 11 only if federally connected.",
         "SAM clinic Nov 14 session elapsed; payment/enrollment and attendance remain unverified. Confirm status with provider before any future session.",
+        "Optional MCPS Culture & Climate Survey closes Nov 29.",
         "Optional Farmland BINGO prize donations by Nov 25; PTA Reflections art entry by Dec 1."
       ]
     }
