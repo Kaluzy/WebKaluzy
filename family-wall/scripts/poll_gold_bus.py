@@ -192,6 +192,7 @@ def run():
     low, high = (dt.time(13, 10), dt.time(15, 0)) if category == "early_release" else (dt.time(15, 40), dt.time(17, 30))
     data["board_stage"] = "unverified"
     data["board_stage_at"] = None
+    data["last_verified_board_stage"] = prior.get("last_verified_board_stage")
     data["board_candidate"] = prior.get("board_candidate")
     data["board_candidate_count"] = prior.get("board_candidate_count", 0)
     if category in ("regular", "early_release") and low <= now.time() <= high:
@@ -246,12 +247,14 @@ def run():
     # A departure requires an explicit school departure notice or other reliable source.
     # Send only meaningful transitions; poll frequency never equals alert frequency.
     if (data.get("board_stage") not in (None, "unverified")
-        and prior.get("board_stage") not in (None, "unverified")
-        and data.get("board_stage") != prior.get("board_stage")):
+        and prior.get("last_verified_board_stage")
+        and data.get("board_stage") != prior.get("last_verified_board_stage")):
         label = {"buses_arrived": "waiting at school", "last_call": "in last call / boarding",
                  "staging": "in staging"}.get(data["board_stage"], "board updated")
         push_if_configured("Gold Bus 1330 — board update",
                            "Gold Bus tile appears " + label + ". Board observation only; departure not confirmed.")
+    if data.get("board_stage") not in (None, "unverified"):
+        data["last_verified_board_stage"] = data["board_stage"]
     # One pre-dismissal notice when polling within the 10-minute lead time.
     if category in ("regular", "early_release") and bell and prior.get("prebell_notified") != d:
         bell_minutes = (13 * 60 + 20) if category == "early_release" else (15 * 60 + 50)
