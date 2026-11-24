@@ -30,7 +30,7 @@
 <div class="links"><a class="button" target="_blank" rel="noopener" href="https://docs.google.com/drawings/d/1rHhGYA0CAlhuiehJv55gSRYgtuLkDf8TAT2e2rHBbtc/edit">Open school dismissal board ↗</a><a class="button secondary" target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/#search/%22Gold+Bus%22">Gold Bus school emails ↗</a><a class="button secondary" target="_blank" rel="noopener" href="https://www.montgomeryschoolsmd.org/departments/transportation/">MCPS transportation ↗</a></div></section>
 <section class="card" style="margin-top:16px"><h2>Upcoming calendar changes</h2><div id="upcoming"></div></section>
 <div class="notice" style="margin-top:16px"><b>Safety first:</b> Don't leave children waiting unsupervised or change pickup plans based only on this dashboard. MCPS messages and your child's official bus-stop assignment are authoritative.</div>
-<footer class="foot">Family Wall companion • A school-board shortcut and verified calendar, not GPS tracking. Updated Nov 24, 2026. Sources: MCPS school calendar, Farmland school schedule, FES dismissal board.</footer>
+<footer class="foot">Family Wall companion • A school-board shortcut and verified calendar, not GPS tracking. Calendar-aware check scheduler. Sources: MCPS school calendar, Farmland school schedule, FES dismissal board.</footer>
 </main><script>
 (function(){
 const zone='America/New_York',fmt=new Intl.DateTimeFormat('en-US',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit',weekday:'long'}),parts=Object.fromEntries(fmt.formatToParts(new Date()).filter(x=>x.type!=='literal').map(x=>[x.type,x.value])),today=parts.year+'-'+parts.month+'-'+parts.day;
@@ -77,7 +77,33 @@ async function poll(){
 document.getElementById('refresh-status').addEventListener('click',poll);
 document.getElementById('enable-notices').addEventListener('click',async()=>{if(!('Notification' in window)){alert('Browser notifications are not supported here.');return;}const p=await Notification.requestPermission();alert(p==='granted'?'Tab notifications enabled while this page stays open.':'Notification permission not granted.');});
 document.getElementById('estimate').addEventListener('click',()=>{const v=document.getElementById('departure-manual').value;if(!v){document.getElementById('arrival-window').textContent='Enter the confirmed departure time first.';return;}const [h,m]=v.split(':').map(Number);const a=h*60+m;const f=n=>String(Math.floor((n%(24*60))/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0');document.getElementById('arrival-window').textContent='Estimated stop arrival: '+f(a+10)+'–'+f(a+15)+' Eastern (not GPS; based on your 10–15-minute estimate).';});
-poll();setInterval(poll,30000);
+async function updateOfficialCalendar(){
+try{
+  const r=await fetch('./school-calendar-status.json?fresh='+Date.now(),{cache:'no-store'});
+  if(!r.ok) return;
+  const data=await r.json(),days=data.days||{};
+  const toDate=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+  toDate.setDate(toDate.getDate()+1);
+  const tomorrow=toDate.getFullYear()+'-'+String(toDate.getMonth()+1).padStart(2,'0')+'-'+String(toDate.getDate()).padStart(2,'0');
+  if(days[tomorrow]){
+    const item=days[tomorrow],early=item.category==='early_release';
+    document.getElementById('tomorrow-school').textContent=tomorrow+' — '+(early?'Early release: 1:20 PM; tracking begins 1:10 PM':'No school / closed — do not track')+' · Official MCPS calendar: '+item.event;
+  }
+}catch(e){}
+}
+let prebellDate='';
+function prebellReminder(){
+  const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',hour12:false,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const f=Object.fromEntries(parts.filter(x=>x.type!=='literal').map(x=>[x.type,x.value]));
+  const d=f.year+'-'+f.month+'-'+f.day,m=Number(f.hour)*60+Number(f.minute);
+  const early=['2026-11-23','2026-11-24','2026-11-25','2026-12-23','2027-02-26','2027-06-11'];
+  const target=early.includes(d)?13*60+20:15*60+50;
+  const isClosed=['2026-11-26','2026-11-27'].includes(d)||(d>='2026-12-24'&&d<='2027-01-01');
+  if(!isClosed&&m>=target-10&&m<=target-5&&prebellDate!==d&&'Notification' in window&&Notification.permission==='granted'){
+    prebellDate=d;new Notification('Gold Bus: dismissal approaching',{body:'School dismissal at '+(early.includes(d)?'1:20 PM':'3:50 PM')+'. Monitoring should be active now.'});
+  }
+}
+poll();updateOfficialCalendar();setInterval(poll,30000);setInterval(updateOfficialCalendar,300000);setInterval(prebellReminder,30000);
 })();
 </script><script>
 (function(){
