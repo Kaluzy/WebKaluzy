@@ -3,6 +3,7 @@
 import datetime as dt
 import hashlib
 import json
+import os
 from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
@@ -94,6 +95,27 @@ def schedule_for(now, live_events=None):
     return ("regular", "15:50")
 
 
+
+
+def push_if_configured(title, message):
+    """Optional Android push via a private ntfy topic stored in repository secrets."""
+    topic = os.environ.get("GOLD_BUS_NTFY_TOPIC", "").strip()
+    if not topic:
+        return False
+    # URL components are intentionally restricted; never include children's names/stop address.
+    if not re.fullmatch(r"[A-Za-z0-9_-]{12,100}", topic):
+        print("Invalid push topic configuration")
+        return False
+    req = Request("https://ntfy.sh/" + topic,
+                  data=message.encode("utf-8"),
+                  headers={"Title": title, "Priority": "high", "Tags": "school_bus"},
+                  method="POST")
+    try:
+        with urlopen(req, timeout=12) as response:
+            return response.status in (200, 201, 202, 204)
+    except (HTTPError, URLError, OSError, TimeoutError) as exc:
+        print("Push delivery unavailable:", type(exc).__name__, flush=True)
+        return False
 
 def detect_gold_column(raw):
     """Color/position observation from the current Gold 1330 school tile.
@@ -222,6 +244,23 @@ def run():
     # The drawing is not a GPS feed. Publishing a changed SVG hash does not mean the Gold bus moved.
     # A board stage requires validated, position-aware detection of the actual Gold 1330 tile.
     # A departure requires an explicit school departure notice or other reliable source.
+    # Send only meaningful transitions; poll frequency never equals alert frequency.
+    if data.get("board_stage") not in (None, "unverified") and data.get("board_stage") != prior.get("board_stage"):
+        label = {"buses_arrived": "waiting at school", "last_call": "in last call / boarding",
+                 "staging": "in staging"}.get(data["board_stage"], "board updated")
+        push_if_configured("Gold Bus 1330 — board update",
+                           "Gold Bus tile appears " + label + ". Board observation only; departure not confirmed.")
+    # One pre-dismissal notice when polling within the 10-minute lead time.
+    if category in ("regular", "early_release") and bell and prior.get("prebell_notified") != d:
+        bell_minutes = (13 * 60 + 20) if category == "early_release" else (15 * 60 + 50)
+        now_minutes = now.hour * 60 + now.minute
+        if bell_minutes - 10 <= now_minutes < bell_minutes:
+            if push_if_configured("Gold Bus 1330 — dismissal soon",
+                                  "Farmland dismissal at " + ("1:20 PM (early release)" if category == "early_release" else "3:50 PM") +
+                                  ". Gold Bus tracking window has begun."):
+                data["prebell_notified"] = d
+    if not data.get("prebell_notified"):
+        data["prebell_notified"] = prior.get("prebell_notified")
     DEST.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"checked_at": data["checked_at"], "schedule": category, "source_health": data["source_health"]}))
 
