@@ -245,7 +245,9 @@ def run():
     # A board stage requires validated, position-aware detection of the actual Gold 1330 tile.
     # A departure requires an explicit school departure notice or other reliable source.
     # Send only meaningful transitions; poll frequency never equals alert frequency.
-    if data.get("board_stage") not in (None, "unverified") and data.get("board_stage") != prior.get("board_stage"):
+    if (data.get("board_stage") not in (None, "unverified")
+        and prior.get("board_stage") not in (None, "unverified")
+        and data.get("board_stage") != prior.get("board_stage")):
         label = {"buses_arrived": "waiting at school", "last_call": "in last call / boarding",
                  "staging": "in staging"}.get(data["board_stage"], "board updated")
         push_if_configured("Gold Bus 1330 — board update",
