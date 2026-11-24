@@ -17,7 +17,16 @@
 <p class="muted">When the school confirms Gold Bus 1330 left Farmland, enter its departure time. The household estimate is 10–15 minutes later; actual traffic and route stops may vary.</p>
 <div class="links"><label for="departure-manual" style="align-self:center">School departure (Eastern)</label><input type="time" id="departure-manual" style="background:#152039;color:white;border:1px solid #64728b;border-radius:8px;padding:10px;font:inherit"/><button type="button" id="estimate">Calculate</button></div>
 <p id="arrival-window" class="notice">Awaiting verified departure time.</p>
-</section><section class="card" style="margin-top:16px"><h2>Gold Bus verification</h2><div class="timeline"><div class="step"><b>1. Bus arrives at Farmland</b><span>Check the “Buses Arrived” column on the drawing</span></div><div class="step"><b>2. Gold appears in “Last Call”</b><span>The board can indicate a dismissal call; it does not establish whether a specific student boarded</span></div><div class="step"><b>3. School confirms departure or delay</b><span>Check Gold Bus emails/ParentSquare. This is the strongest source for a change alert</span></div><div class="step"><b>4. Bus reaches your stop</b><span>Not tracked here; stop arrival must be independently confirmed</span></div></div>
+</section><section class="card" style="margin-top:16px" id="trip-tracker">
+<h2>Gold Bus trip tracker</h2>
+<p class="muted">Four confirmed checkpoints. Tap a stage when the school confirms it, or when you personally observe it. Unverified source data never advances the bus automatically.</p>
+<div id="trip-steps" class="timeline"></div>
+<p id="trip-eta" class="notice">No confirmed school departure yet.</p>
+<div class="links"><button id="reset-trip" type="button" class="secondary">Reset today's trip</button><button id="record-trip" type="button">Record actual arrival</button></div>
+<p id="learning-stats" class="muted" style="font-size:.87rem">Learning begins after a confirmed school departure and an observed stop arrival.</p>
+</section>
+<section class="card" style="margin-top:16px"><h2>Tomorrow's plan</h2><div id="tomorrow-school"></div><p class="muted" style="font-size:.83rem">The calendar below is currently a curated MCPS 2026–27 date list, not a self-updating live school-calendar API. Check MCPS for emergency adjustments.</p></section>
+<section class="card" style="margin-top:16px"><h2>Gold Bus verification</h2><div class="timeline"><div class="step"><b>1. Bus arrives at Farmland</b><span>Check the “Buses Arrived” column on the drawing</span></div><div class="step"><b>2. Gold appears in “Last Call”</b><span>The board can indicate a dismissal call; it does not establish whether a specific student boarded</span></div><div class="step"><b>3. School confirms departure or delay</b><span>Check Gold Bus emails/ParentSquare. This is the strongest source for a change alert</span></div><div class="step"><b>4. Bus reaches your stop</b><span>Not tracked here; stop arrival must be independently confirmed</span></div></div>
 <div class="links"><a class="button" target="_blank" rel="noopener" href="https://docs.google.com/drawings/d/1rHhGYA0CAlhuiehJv55gSRYgtuLkDf8TAT2e2rHBbtc/edit">Open school dismissal board ↗</a><a class="button secondary" target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/#search/%22Gold+Bus%22">Gold Bus school emails ↗</a><a class="button secondary" target="_blank" rel="noopener" href="https://www.montgomeryschoolsmd.org/departments/transportation/">MCPS transportation ↗</a></div></section>
 <section class="card" style="margin-top:16px"><h2>Upcoming calendar changes</h2><div id="upcoming"></div></section>
 <div class="notice" style="margin-top:16px"><b>Safety first:</b> Don't leave children waiting unsupervised or change pickup plans based only on this dashboard. MCPS messages and your child's official bus-stop assignment are authoritative.</div>
@@ -34,6 +43,12 @@ else if(early.includes(today))state='Early release — dismissal at 1:20 PM';
 else if(possible.includes(today))state='Possible make-up day — verify MCPS';
 else if([0,6].includes(new Date(today+'T12:00:00').getDay()))state='Weekend — no regular school';
 document.getElementById('schoolstatus').textContent=state;
+const tomorrowDate=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));tomorrowDate.setDate(tomorrowDate.getDate()+1);
+const tomorrow=tomorrowDate.getFullYear()+'-'+String(tomorrowDate.getMonth()+1).padStart(2,'0')+'-'+String(tomorrowDate.getDate()).padStart(2,'0');
+const nextDescription=closed.find(x=>x[0]<=tomorrow&&tomorrow<=x[1]);
+const dayName=tomorrowDate.toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'});
+const tomorrowText=nextDescription?'Closed — '+nextDescription[2]:early.includes(tomorrow)?'Early release: dismissal 1:20 PM; automatic monitoring 1:10 PM':possible.includes(tomorrow)?'Potential make-up day — verify with MCPS':tomorrowDate.getDay()===0||tomorrowDate.getDay()===6?'Weekend — no regular bus':'Regular dismissal 3:50 PM; automatic monitoring 3:40 PM';
+document.getElementById('tomorrow-school').textContent=dayName+' — '+tomorrowText;
 const events=[['2026-11-23','Nov 23–25: early release (1:20 PM)'],['2026-11-26','Nov 26–27: no school'],['2026-12-23','Dec 23: early release (1:20 PM)'],['2026-12-24','Dec 24 – Jan 1: winter break'],['2027-01-18','Jan 18: no school'],['2027-01-25','Jan 25: no school'],['2027-02-26','Feb 26: early release']].filter(x=>x[0]>=today);
 document.getElementById('upcoming').innerHTML=events.length?events.slice(0,4).map(x=>'<div class="step" style="margin-top:8px">'+x[1]+'</div>').join(''):'<p class="muted">Refer to the official MCPS calendar for dates beyond this preview.</p>';
 })();
@@ -57,5 +72,45 @@ document.getElementById('refresh-status').addEventListener('click',poll);
 document.getElementById('enable-notices').addEventListener('click',async()=>{if(!('Notification' in window)){alert('Browser notifications are not supported here.');return;}const p=await Notification.requestPermission();alert(p==='granted'?'Tab notifications enabled while this page stays open.':'Notification permission not granted.');});
 document.getElementById('estimate').addEventListener('click',()=>{const v=document.getElementById('departure-manual').value;if(!v){document.getElementById('arrival-window').textContent='Enter the confirmed departure time first.';return;}const [h,m]=v.split(':').map(Number);const a=h*60+m;const f=n=>String(Math.floor((n%(24*60))/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0');document.getElementById('arrival-window').textContent='Estimated stop arrival: '+f(a+10)+'–'+f(a+15)+' Eastern (not GPS; based on your 10–15-minute estimate).';});
 poll();setInterval(poll,30000);
+})();
+</script><script>
+(function(){
+const TZ='America/New_York',KEY='gold-bus-trip-v2',HISTORY='gold-bus-history-v1';
+const stages=[{key:'arrived',label:'1 · Waiting at school',detail:'Gold 1330 confirmed in Buses Arrived',message:'Gold Bus is waiting at Farmland'},{key:'last_call',label:'2 · Last call / boarding',detail:'Gold 1330 confirmed in Last Call',message:'Gold Bus is at last call'},{key:'departed',label:'3 · Departed school',detail:'School confirms Gold 1330 has left',message:'Gold Bus has left Farmland'},{key:'stop',label:'4 · Arrived at stop',detail:'Parent personally confirms arrival at your stop',message:'Gold Bus arrived at stop'}];
+const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+let trip={date:today(),stage:null,events:{}};
+try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved&&saved.date===today())trip=saved;}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(trip));}catch(e){}};
+const formatTime=s=>new Date(s).toLocaleTimeString('en-US',{timeZone:TZ,hour:'numeric',minute:'2-digit'});
+const addMinutes=(d,n)=>formatTime(new Date(new Date(d).getTime()+n*60000).toISOString());
+function history(){try{const a=JSON.parse(localStorage.getItem(HISTORY)||'[]');return Array.isArray(a)?a:[];}catch(e){return [];}}
+const median=arr=>{const a=[...arr].sort((a,b)=>a-b);return a.length?(a.length%2?a[(a.length-1)/2]:(a[a.length/2-1]+a[a.length/2])/2):null;};
+function learn(){
+const h=history();const med=median(h.map(x=>x.duration));const txt=h.length?'Learned from '+h.length+' confirmed trip'+(h.length===1?'':'s')+': median '+med+' minutes school-to-stop. Your planning baseline remains 10–15 minutes until there is enough data.':'No completed trips yet. Recording confirmed departure and observed arrival will calculate a median journey time.';
+document.getElementById('learning-stats').textContent=txt;return med;
+}
+function render(){
+const host=document.getElementById('trip-steps');host.replaceChildren();
+stages.forEach((s,i)=>{
+const div=document.createElement('div');div.className='step';
+const b=document.createElement('b');b.textContent=s.label;div.append(b);
+const p=document.createElement('span');p.textContent=s.detail+(trip.events[s.key]?' · Confirmed '+formatTime(trip.events[s.key]):' · Not yet confirmed');div.append(p);
+const btn=document.createElement('button');btn.type='button';btn.style.marginTop='10px';btn.textContent=trip.events[s.key]?'Recorded':'Mark confirmed';btn.disabled=!!trip.events[s.key]||(i>0&&!trip.events[stages[i-1].key]);btn.addEventListener('click',()=>mark(s.key));div.append(btn);host.append(div);
+});
+const eta=document.getElementById('trip-eta');const depart=trip.events.departed;eta.textContent=depart?'School departure confirmed '+formatTime(depart)+'. Estimated arrival: '+addMinutes(depart,10)+'–'+addMinutes(depart,15)+' Eastern (based on your estimate; not GPS).'+(trip.events.stop?' Stop arrived '+formatTime(trip.events.stop)+'.':''): 'Awaiting school-confirmed departure. No bus-stop ETA.';
+learn();
+}
+function mark(key){
+if(trip.events[key])return;trip.events[key]=new Date().toISOString();trip.stage=key;save();
+if(key==='stop'&&trip.events.departed){
+const duration=Math.round((new Date(trip.events.stop)-new Date(trip.events.departed))/60000);
+if(duration>=1&&duration<=120){const h=history();if(!h.some(x=>x.date===trip.date)){h.push({date:trip.date,duration});try{localStorage.setItem(HISTORY,JSON.stringify(h.slice(-120)));}catch(e){}}}
+}
+render();
+if('Notification' in window&&Notification.permission==='granted')new Notification('Gold Bus 1330',{body:stages.find(s=>s.key===key).message+' (manually confirmed).'});
+}
+document.getElementById('reset-trip').addEventListener('click',()=>{if(confirm('Clear the stages recorded for today? Historical completed trips will remain.')){trip={date:today(),stage:null,events:{}};save();render();}});
+document.getElementById('record-trip').addEventListener('click',()=>{if(!trip.events.departed){alert('Please confirm the school departure first.');return;}if(!trip.events.arrived)trip.events.arrived=trip.events.departed;if(!trip.events.last_call)trip.events.last_call=trip.events.departed;mark('stop');});
+render();
 })();
 </script></body></html>
