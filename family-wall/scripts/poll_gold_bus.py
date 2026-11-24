@@ -180,7 +180,7 @@ def run():
                 mime = response.headers.get("Content-Type", "").lower()
             if len(raw) > 5_000_000:
                 data["source_health"] = "oversize"
-            elif "image/png" in mime or raw[:8] == b"\\x89PNG\\r\\n\\x1a\\n":
+            elif "image/png" in mime or raw[:8] == b"\x89PNG\r\n\x1a\n":
                 data["source_health"] = "board_image_accessible"
                 data["source_hash"] = hashlib.sha256(raw).hexdigest()
                 candidate = detect_gold_column(raw)
