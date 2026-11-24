@@ -5,7 +5,19 @@
 <section class="hero"><small>Current status</small><div class="big">Not confirmed</div><p>The school's dismissal drawing identifies Gold Bus 1330. This page does not have a verified real-time feed. Check the school board or the latest school message for its actual status. No movement or arrival time is inferred.</p></section>
 <div class="grid"><div class="card"><div class="muted">Normal school dismissal</div><strong class="time">3:50 PM</strong><span class="muted">School bell, not bus-stop arrival</span></div><div class="card"><div class="muted">Early-release dismissal</div><strong class="time">1:20 PM</strong><span class="muted">2 h 30 min earlier than normal</span></div></div>
 <section class="card" style="margin-top:16px"><h2>Today’s school schedule</h2><div id="schoolstatus"></div><p class="muted" style="font-size:.85rem">Known calendar dates only. For weather, special events, or emergency changes, verify directly with MCPS.</p></section>
-<section class="card" style="margin-top:16px"><h2>Gold Bus verification</h2><div class="timeline"><div class="step"><b>1. Bus arrives at Farmland</b><span>Check the “Buses Arrived” column on the drawing</span></div><div class="step"><b>2. Gold appears in “Last Call”</b><span>The board can indicate a dismissal call; it does not establish whether a specific student boarded</span></div><div class="step"><b>3. School confirms departure or delay</b><span>Check Gold Bus emails/ParentSquare. This is the strongest source for a change alert</span></div><div class="step"><b>4. Bus reaches your stop</b><span>Not tracked here; stop arrival must be independently confirmed</span></div></div>
+<section class="card" style="margin-top:16px" id="live-feed">
+<h2>Automatic Gold Bus checks <span class="tag">Every 5 min*</span></h2>
+<p id="feed-state" class="notice">Loading published monitor status…</p>
+<p class="muted" id="feed-checked" style="font-size:.85rem">Last check: waiting</p>
+<div class="links"><button type="button" id="refresh-status">Refresh status now</button><button type="button" id="enable-notices" class="secondary">Enable tab notifications</button></div>
+<p class="muted" style="font-size:.83rem">*GitHub Actions runs approximately every five minutes during the weekday dismissal window; scheduled starts can be delayed. This page reads the published results. Notifications work only while this tab remains open; they are not background phone push alerts.</p>
+</section>
+<section class="card" style="margin-top:16px">
+<h2>Estimate arrival from confirmed departure</h2>
+<p class="muted">When the school confirms Gold Bus 1330 left Farmland, enter its departure time. The household estimate is 10–15 minutes later; actual traffic and route stops may vary.</p>
+<div class="links"><label for="departure-manual" style="align-self:center">School departure (Eastern)</label><input type="time" id="departure-manual" style="background:#152039;color:white;border:1px solid #64728b;border-radius:8px;padding:10px;font:inherit"/><button type="button" id="estimate">Calculate</button></div>
+<p id="arrival-window" class="notice">Awaiting verified departure time.</p>
+</section><section class="card" style="margin-top:16px"><h2>Gold Bus verification</h2><div class="timeline"><div class="step"><b>1. Bus arrives at Farmland</b><span>Check the “Buses Arrived” column on the drawing</span></div><div class="step"><b>2. Gold appears in “Last Call”</b><span>The board can indicate a dismissal call; it does not establish whether a specific student boarded</span></div><div class="step"><b>3. School confirms departure or delay</b><span>Check Gold Bus emails/ParentSquare. This is the strongest source for a change alert</span></div><div class="step"><b>4. Bus reaches your stop</b><span>Not tracked here; stop arrival must be independently confirmed</span></div></div>
 <div class="links"><a class="button" target="_blank" rel="noopener" href="https://docs.google.com/drawings/d/1rHhGYA0CAlhuiehJv55gSRYgtuLkDf8TAT2e2rHBbtc/edit">Open school dismissal board ↗</a><a class="button secondary" target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/#search/%22Gold+Bus%22">Gold Bus school emails ↗</a><a class="button secondary" target="_blank" rel="noopener" href="https://www.montgomeryschoolsmd.org/departments/transportation/">MCPS transportation ↗</a></div></section>
 <section class="card" style="margin-top:16px"><h2>Upcoming calendar changes</h2><div id="upcoming"></div></section>
 <div class="notice" style="margin-top:16px"><b>Safety first:</b> Don't leave children waiting unsupervised or change pickup plans based only on this dashboard. MCPS messages and your child's official bus-stop assignment are authoritative.</div>
@@ -24,5 +36,26 @@ else if([0,6].includes(new Date(today+'T12:00:00').getDay()))state='Weekend — 
 document.getElementById('schoolstatus').textContent=state;
 const events=[['2026-11-23','Nov 23–25: early release (1:20 PM)'],['2026-11-26','Nov 26–27: no school'],['2026-12-23','Dec 23: early release (1:20 PM)'],['2026-12-24','Dec 24 – Jan 1: winter break'],['2027-01-18','Jan 18: no school'],['2027-01-25','Jan 25: no school'],['2027-02-26','Feb 26: early release']].filter(x=>x[0]>=today);
 document.getElementById('upcoming').innerHTML=events.length?events.slice(0,4).map(x=>'<div class="step" style="margin-top:8px">'+x[1]+'</div>').join(''):'<p class="muted">Refer to the official MCPS calendar for dates beyond this preview.</p>';
+})();
+</script><script>
+(function(){
+const statusEl=document.getElementById('feed-state'),lastEl=document.getElementById('feed-checked');
+let previous='';
+const fmt=(d)=>new Date(d).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});
+async function poll(){
+  try{
+    const r=await fetch('./gold-bus-status.json?fresh='+Date.now(),{cache:'no-store'});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const s=await r.json();
+    const state=s.source_health==='drawing_export_accessible'?'School drawing checked (no validated departure event)':s.source_health==='source_unavailable'?'School drawing export unavailable':s.source_health==='outside_monitor_window'?'Outside dismissal monitoring window':s.source_health==='skipped_school_closed'?'School closed / weekend':s.source_health==='awaiting_first_scheduled_check'?'Waiting for first scheduled run':s.source_health;
+    statusEl.textContent='Gold 1330: '+(s.status==='not_confirmed'?'Not confirmed':s.status)+' · '+state+'. '+(s.notice||'');
+    lastEl.textContent='Last automatic check: '+(s.checked_at?fmt(s.checked_at):'not yet recorded')+' · School schedule: '+(s.schedule||'unknown')+' · Dismissal '+(s.dismissal_time||'not scheduled');
+    if(s.departure_at&&s.departure_at!==previous){if(previous&&Notification.permission==='granted')new Notification('Gold Bus confirmed departure',{body:'Source-confirmed departure at '+fmt(s.departure_at)+'. Estimated stop arrival in 10–15 minutes.'});previous=s.departure_at;}
+  }catch(e){statusEl.textContent='Status feed unavailable. Use the official school board or ParentSquare; no Gold Bus arrival is confirmed.';}
+}
+document.getElementById('refresh-status').addEventListener('click',poll);
+document.getElementById('enable-notices').addEventListener('click',async()=>{if(!('Notification' in window)){alert('Browser notifications are not supported here.');return;}const p=await Notification.requestPermission();alert(p==='granted'?'Tab notifications enabled while this page stays open.':'Notification permission not granted.');});
+document.getElementById('estimate').addEventListener('click',()=>{const v=document.getElementById('departure-manual').value;if(!v){document.getElementById('arrival-window').textContent='Enter the confirmed departure time first.';return;}const [h,m]=v.split(':').map(Number);const a=h*60+m;const f=n=>String(Math.floor((n%(24*60))/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0');document.getElementById('arrival-window').textContent='Estimated stop arrival: '+f(a+10)+'–'+f(a+15)+' Eastern (not GPS; based on your 10–15-minute estimate).';});
+poll();setInterval(poll,30000);
 })();
 </script></body></html>
