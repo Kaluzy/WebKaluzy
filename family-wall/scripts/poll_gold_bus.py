@@ -3,7 +3,6 @@
 import datetime as dt
 import hashlib
 import json
-import os
 from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
@@ -66,8 +65,8 @@ def run():
         "source_hash": None,
         "notice": "No verified Gold Bus departure. Board labels alone do not establish departure or child boarding.",
     }
-    # Check only in the dismissal window in Eastern time.
-    low, high = (dt.time(12, 30), dt.time(15, 0)) if category == "early_release" else (dt.time(15, 0), dt.time(17, 30))
+    # Start exactly ten minutes before the official dismissal bell.
+    low, high = (dt.time(13, 10), dt.time(15, 0)) if category == "early_release" else (dt.time(15, 40), dt.time(17, 30))
     if category in ("regular", "early_release") and low <= now.time() <= high:
         try:
             req = Request(URL, headers={"User-Agent": "FarmlandGoldBusMonitor/1.0", "Accept": "image/svg+xml"})
@@ -94,7 +93,18 @@ def run():
         data["notice"] = "Possible make-up day. Confirm actual school calendar before relying on dismissal schedule."
     else:
         data["source_health"] = "outside_monitor_window"
-    DEST.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    data["monitor_start"] = "13:10" if category == "early_release" else ("15:40" if category == "regular" else None)
+    data["monitoring_phase"] = ("monitoring" if category in ("early_release", "regular") and low <= now.time() <= high
+                                else "closed" if category in ("closed", "weekend")
+                                else "outside_window")
+    data["board_stage"] = "unverified"
+    data["board_stage_at"] = None
+    data["departure_confirmation_source"] = None
+    data["stop_arrival_observed_at"] = None
+    # The drawing is not a GPS feed. Publishing a changed SVG hash does not mean the Gold bus moved.
+    # A board stage requires validated, position-aware detection of the actual Gold 1330 tile.
+    # A departure requires an explicit school departure notice or other reliable source.
+    DEST.write_text(json.dumps(data, indent=2) + "\\n", encoding="utf-8")
     print(json.dumps({"checked_at": data["checked_at"], "schedule": category, "source_health": data["source_health"]}))
 
 
