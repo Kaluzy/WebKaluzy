@@ -1,0 +1,31 @@
+name: Gold Bus monitor
+on:
+  schedule:
+    - cron: '2/5 16-23 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: gold-bus-monitor
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check source and update status
+        run: python family-wall/scripts/poll_gold_bus.py
+      - name: Publish status (only if changed)
+        run: |
+          if ! git diff --quiet -- family-wall/gold-bus-status.json; then
+            git config user.name "Gold Bus Monitor"
+            git config user.email "gold-bus-bot@users.noreply.github.com"
+            git add family-wall/gold-bus-status.json
+            git commit -m "Update Gold Bus monitor status [skip ci]"
+            git push
+          fi
