@@ -8,11 +8,13 @@ from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 from zoneinfo import ZoneInfo
 import re
+from io import BytesIO
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / "gold-bus-status.json"
 ID = "1rHhGYA0CAlhuiehJv55gSRYgtuLkDf8TAT2e2rHBbtc"
-URL = f"https://docs.google.com/drawings/d/{ID}/export/svg"
+URL = f"https://docs.google.com/drawings/d/{ID}/export/png"
 NY = ZoneInfo("America/New_York")
 CALENDAR_URL = "https://ww2.montgomeryschoolsmd.org/calendar/download.aspx?file=MCPS_SchoolYearCalendar_Subscription"
 CALENDAR_DEST = ROOT / "school-calendar-status.json"
@@ -92,6 +94,34 @@ def schedule_for(now, live_events=None):
     return ("regular", "15:50")
 
 
+
+def detect_gold_column(raw):
+    """Color/position observation from the current Gold 1330 school tile.
+    Layout-specific, so never infer departure from this detector."""
+    im = Image.open(BytesIO(raw)).convert("RGB")
+    w, h = im.size
+    if not (800 <= w <= 5000 and 500 <= h <= 5000):
+        return None
+    # Gold tile has a distinctive dark-gold fill (reference: RGB 178,150,14).
+    # Ignore the large school bus photograph/header by starting below the header.
+    counters = {"staging": 0, "buses_arrived": 0, "last_call": 0}
+    for y in range(int(h * .2), int(h * .80), 3):
+        for x in range(0, w, 3):
+            red, green, blue = im.getpixel((x, y))
+            if (140 <= red <= 205 and 115 <= green <= 180 and blue < 60
+                and red > green * 1.04 and green > blue * 2.5):
+                section = ("staging" if x < w * .37 else
+                           "buses_arrived" if x < w * .62 else "last_call")
+                counters[section] += 1
+    best = max(counters, key=counters.get)
+    # Require concentration in one region and enough pixels for a bus tile.
+    if counters[best] < max(180, (w * h) // 12000):
+        return None
+    if counters[best] < sum(counters.values()) * .8:
+        return None
+    return best
+
+
 def run():
     now = dt.datetime.now(NY)
     official_events = None
@@ -111,6 +141,14 @@ def run():
         print("Official calendar fetch unavailable:", type(exc).__name__, flush=True)
     category, bell = schedule_for(now, official_events)
     d = now.date().isoformat()
+    prior = {}
+    if DEST.exists():
+        try:
+            prior = json.loads(DEST.read_text(encoding="utf-8"))
+            if prior.get("date") != d:
+                prior = {}
+        except (ValueError, OSError):
+            prior = {}
     data = {
         "school": "Farmland Elementary",
         "bus": "Gold 1330",
@@ -130,6 +168,10 @@ def run():
     }
     # Start exactly ten minutes before the official dismissal bell.
     low, high = (dt.time(13, 10), dt.time(15, 0)) if category == "early_release" else (dt.time(15, 40), dt.time(17, 30))
+    data["board_stage"] = "unverified"
+    data["board_stage_at"] = None
+    data["board_candidate"] = prior.get("board_candidate")
+    data["board_candidate_count"] = prior.get("board_candidate_count", 0)
     if category in ("regular", "early_release") and low <= now.time() <= high:
         try:
             req = Request(URL, headers={"User-Agent": "FarmlandGoldBusMonitor/1.0", "Accept": "image/svg+xml"})
@@ -138,10 +180,25 @@ def run():
                 mime = response.headers.get("Content-Type", "").lower()
             if len(raw) > 5_000_000:
                 data["source_health"] = "oversize"
-            elif b"<svg" in raw[:2000] and ("svg" in mime or raw.lstrip().startswith(b"<?xml")):
-                data["source_health"] = "drawing_export_accessible"
+            elif "image/png" in mime or raw[:8] == b"\\x89PNG\\r\\n\\x1a\\n":
+                data["source_health"] = "board_image_accessible"
                 data["source_hash"] = hashlib.sha256(raw).hexdigest()
-                data["notice"] = "Drawing export accessible. No validated machine-readable departure signal; status remains unconfirmed."
+                candidate = detect_gold_column(raw)
+                if candidate:
+                    streak = prior.get("board_candidate_count", 0) + 1 if prior.get("board_candidate") == candidate else 1
+                    data["board_candidate"] = candidate
+                    data["board_candidate_count"] = streak
+                    if streak >= 2:
+                        data["board_stage"] = candidate
+                        data["board_stage_at"] = (prior.get("board_stage_at") if prior.get("board_stage") == candidate
+                                                   else now.isoformat(timespec="seconds"))
+                        data["notice"] = "Gold tile visually observed in " + candidate.replace("_", " ") + " section on at least two checks; not proof of bus departure."
+                    else:
+                        data["notice"] = "Potential Gold tile location detected once; awaiting repeat confirmation."
+                else:
+                    data["notice"] = "Gold tile could not be located reliably. No status confirmed."
+                    data["board_candidate"] = None
+                    data["board_candidate_count"] = 0
             else:
                 data["source_health"] = "not_machine_readable"
         except (HTTPError, URLError, TimeoutError, OSError) as exc:
@@ -160,8 +217,6 @@ def run():
     data["monitoring_phase"] = ("monitoring" if category in ("early_release", "regular") and low <= now.time() <= high
                                 else "closed" if category in ("closed", "weekend")
                                 else "outside_window")
-    data["board_stage"] = "unverified"
-    data["board_stage_at"] = None
     data["departure_confirmation_source"] = None
     data["stop_arrival_observed_at"] = None
     # The drawing is not a GPS feed. Publishing a changed SVG hash does not mean the Gold bus moved.
