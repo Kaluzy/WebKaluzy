@@ -25,6 +25,8 @@ jobs:
           python -m py_compile family-wall/scripts/poll_gold_bus.py family-wall/scripts/test_gold_bus.py
           python family-wall/scripts/test_gold_bus.py
       - name: Check source and update status
+        env:
+          GOLD_BUS_NTFY_TOPIC: ${{ secrets.GOLD_BUS_NTFY_TOPIC }}
         run: python family-wall/scripts/poll_gold_bus.py
       - name: Publish status (only if changed)
         run: |
