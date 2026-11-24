@@ -55,7 +55,7 @@ document.getElementById('upcoming').innerHTML=events.length?events.slice(0,4).ma
 </script><script>
 (function(){
 const statusEl=document.getElementById('feed-state'),lastEl=document.getElementById('feed-checked');
-let previous='';
+let previous='';let previousStage=null;let lastDate='';
 const fmt=(d)=>new Date(d).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});
 async function poll(){
   try{
@@ -65,7 +65,13 @@ async function poll(){
     const state=s.source_health==='drawing_export_accessible'?'School drawing checked (no validated departure event)':s.source_health==='source_unavailable'?'School drawing export unavailable':s.source_health==='outside_monitor_window'?'Outside dismissal monitoring window':s.source_health==='skipped_school_closed'?'School closed / weekend':s.source_health==='awaiting_first_scheduled_check'?'Waiting for first scheduled run':s.source_health;
     statusEl.textContent='Gold 1330: '+(s.status==='not_confirmed'?'Not confirmed':s.status)+' · '+state+'. '+(s.notice||'');
     lastEl.textContent='Last automatic check: '+(s.checked_at?fmt(s.checked_at):'not yet recorded')+' · School schedule: '+(s.schedule||'unknown')+' · Dismissal '+(s.dismissal_time||'not scheduled');
-    if(s.departure_at&&s.departure_at!==previous){if(previous&&Notification.permission==='granted')new Notification('Gold Bus confirmed departure',{body:'Source-confirmed departure at '+fmt(s.departure_at)+'. Estimated stop arrival in 10–15 minutes.'});previous=s.departure_at;}
+    const stage=s.board_stage||'unverified';
+    if(s.date!==lastDate){lastDate=s.date;previousStage=stage;}
+    else if(stage!==previousStage&&previousStage!==null&&stage!=='unverified'&&s.board_stage_at&&'Notification' in window&&Notification.permission==='granted'){
+      new Notification('Gold Bus 1330 update',{body:stage==='buses_arrived'?'Gold Bus confirmed waiting at school':stage==='last_call'?'Gold Bus confirmed for last call':'New verified Gold Bus stage: '+stage});
+    }
+    previousStage=stage;
+    if(s.departure_at&&s.departure_at!==previous){if(previous&&'Notification' in window&&Notification.permission==='granted')new Notification('Gold Bus confirmed departure',{body:'Source-confirmed departure at '+fmt(s.departure_at)+'. Estimated stop arrival in 10–15 minutes.'});previous=s.departure_at;}
   }catch(e){statusEl.textContent='Status feed unavailable. Use the official school board or ParentSquare; no Gold Bus arrival is confirmed.';}
 }
 document.getElementById('refresh-status').addEventListener('click',poll);
@@ -97,7 +103,11 @@ const b=document.createElement('b');b.textContent=s.label;div.append(b);
 const p=document.createElement('span');p.textContent=s.detail+(trip.events[s.key]?' · Confirmed '+formatTime(trip.events[s.key]):' · Not yet confirmed');div.append(p);
 const btn=document.createElement('button');btn.type='button';btn.style.marginTop='10px';btn.textContent=trip.events[s.key]?'Recorded':'Mark confirmed';btn.disabled=!!trip.events[s.key]||(i>0&&!trip.events[stages[i-1].key]);btn.addEventListener('click',()=>mark(s.key));div.append(btn);host.append(div);
 });
-const eta=document.getElementById('trip-eta');const depart=trip.events.departed;eta.textContent=depart?'School departure confirmed '+formatTime(depart)+'. Estimated arrival: '+addMinutes(depart,10)+'–'+addMinutes(depart,15)+' Eastern (based on your estimate; not GPS).'+(trip.events.stop?' Stop arrived '+formatTime(trip.events.stop)+'.':''): 'Awaiting school-confirmed departure. No bus-stop ETA.';
+const eta=document.getElementById('trip-eta');const depart=trip.events.departed;
+const samples=history(),learned=median(samples.map(x=>x.duration));
+const minMins=samples.length>=3?Math.max(3,Math.round(learned-3)):10;
+const maxMins=samples.length>=3?Math.round(learned+3):15;
+eta.textContent=depart?'School departure confirmed '+formatTime(depart)+'. Estimated arrival: '+addMinutes(depart,minMins)+'–'+addMinutes(depart,maxMins)+' Eastern ('+(samples.length>=3?'based on '+samples.length+' observed trips':'based on your 10–15-minute estimate')+'; not GPS).'+(trip.events.stop?' Stop arrived '+formatTime(trip.events.stop)+'.':''): 'Awaiting school-confirmed departure. No bus-stop ETA.';
 learn();
 }
 function mark(key){
