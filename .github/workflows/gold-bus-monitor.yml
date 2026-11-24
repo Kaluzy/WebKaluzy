@@ -22,10 +22,11 @@ jobs:
         run: python family-wall/scripts/poll_gold_bus.py
       - name: Publish status (only if changed)
         run: |
-          git add family-wall/gold-bus-status.json\n          if [ -f family-wall/school-calendar-status.json ]; then git add family-wall/school-calendar-status.json; fi\n          if ! git diff --cached --quiet; then
+          git add family-wall/gold-bus-status.json
+          if [ -f family-wall/school-calendar-status.json ]; then git add family-wall/school-calendar-status.json; fi
+          if ! git diff --cached --quiet; then
             git config user.name "Gold Bus Monitor"
             git config user.email "gold-bus-bot@users.noreply.github.com"
-            git add family-wall/gold-bus-status.json
             git commit -m "Update Gold Bus monitor status [skip ci]"
             git push
           fi
