@@ -1,0 +1,16 @@
+{
+  "school": "Farmland Elementary",
+  "bus": "Gold 1330",
+  "date": "2026-11-24",
+  "checked_at": null,
+  "schedule": "early_release",
+  "dismissal_time": "13:20",
+  "status": "not_confirmed",
+  "departure_at": null,
+  "estimated_stop_window": null,
+  "source": "FES Bus Dismissal Google Drawing",
+  "source_url": "https://docs.google.com/drawings/d/1rHhGYA0CAlhuiehJv55gSRYgtuLkDf8TAT2e2rHBbtc/edit",
+  "source_health": "awaiting_first_scheduled_check",
+  "source_hash": null,
+  "notice": "Automation installed. First scheduled check has not been verified. No confirmed departure."
+}
