@@ -127,7 +127,7 @@ stages.forEach((s,i)=>{
 const div=document.createElement('div');div.className='step';
 const b=document.createElement('b');b.textContent=s.label;div.append(b);
 const p=document.createElement('span');p.textContent=s.detail+(trip.events[s.key]?' · Confirmed '+formatTime(trip.events[s.key]):' · Not yet confirmed');div.append(p);
-const btn=document.createElement('button');btn.type='button';btn.style.marginTop='10px';btn.textContent=trip.events[s.key]?'Recorded':'Mark confirmed';btn.disabled=!!trip.events[s.key]||(i>0&&!trip.events[stages[i-1].key]);btn.addEventListener('click',()=>mark(s.key));div.append(btn);host.append(div);
+const btn=document.createElement('button');btn.type='button';btn.style.marginTop='10px';btn.textContent=trip.events[s.key]?'Recorded':'Mark confirmed';btn.disabled=!!trip.events[s.key];btn.addEventListener('click',()=>mark(s.key));div.append(btn);host.append(div);
 });
 const eta=document.getElementById('trip-eta');const depart=trip.events.departed;
 const samples=history(),learned=median(samples.map(x=>x.duration));
@@ -146,7 +146,7 @@ render();
 if('Notification' in window&&Notification.permission==='granted')new Notification('Gold Bus 1330',{body:stages.find(s=>s.key===key).message+' (manually confirmed).'});
 }
 document.getElementById('reset-trip').addEventListener('click',()=>{if(confirm('Clear the stages recorded for today? Historical completed trips will remain.')){trip={date:today(),stage:null,events:{}};save();render();}});
-document.getElementById('record-trip').addEventListener('click',()=>{if(!trip.events.departed){alert('Please confirm the school departure first.');return;}if(!trip.events.arrived)trip.events.arrived=trip.events.departed;if(!trip.events.last_call)trip.events.last_call=trip.events.departed;mark('stop');});
+document.getElementById('record-trip').addEventListener('click',()=>{if(!trip.events.departed){alert('Please confirm the school departure first.');return;}mark('stop');});
 render();
 })();
 </script></body></html>
