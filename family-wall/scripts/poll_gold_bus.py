@@ -24,18 +24,18 @@ def read_official_calendar():
         raw = response.read(1_500_001)
     if len(raw) > 1_500_000:
         raise ValueError("Calendar larger than safe bound")
-    text = raw.decode("utf-8-sig", errors="replace").replace("\\r\\n", "\\n")
+    text = raw.decode("utf-8-sig", errors="replace").replace("\r\n", "\n")
     if "BEGIN:VCALENDAR" not in text or "BEGIN:VEVENT" not in text:
         raise ValueError("Unexpected MCPS calendar format")
-    unfolded = re.sub(r"\\n[ \\t]", "", text)
+    unfolded = re.sub(r"\n[ \t]", "", text)
     events = {}
     for part in unfolded.split("BEGIN:VEVENT")[1:]:
         block = part.split("END:VEVENT", 1)[0]
         fields = dict((line.split(":", 1)[0].split(";", 1)[0], line.split(":", 1)[1])
                       for line in block.splitlines() if ":" in line)
         begin = fields.get("DTSTART", "")
-        summary = fields.get("SUMMARY", "").replace("\\\\,", ",").strip()
-        if not re.match(r"^\\d{8}", begin):
+        summary = fields.get("SUMMARY", "").replace("\\,", ",").strip()
+        if not re.match(r"^\d{8}", begin):
             continue
         if len(begin) >= 16 and begin.endswith("Z"):
             date = (dt.datetime.strptime(begin[:15], "%Y%m%dT%H%M%S")
@@ -106,7 +106,7 @@ def run():
             "calendar_health": calendar_health,
             "days": upcoming
         }
-        CALENDAR_DEST.write_text(json.dumps(calendar_payload, indent=2) + "\\n", encoding="utf-8")
+        CALENDAR_DEST.write_text(json.dumps(calendar_payload, indent=2) + "\n", encoding="utf-8")
     except (HTTPError, URLError, TimeoutError, OSError, ValueError) as exc:
         print("Official calendar fetch unavailable:", type(exc).__name__, flush=True)
     category, bell = schedule_for(now, official_events)
