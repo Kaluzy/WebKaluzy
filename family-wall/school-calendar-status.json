@@ -1,0 +1,59 @@
+{
+  "source": "https://ww2.montgomeryschoolsmd.org/calendar/download.aspx?file=MCPS_SchoolYearCalendar_Subscription",
+  "fetched_at": "2026-11-24T23:32:08-05:00",
+  "calendar_health": "official_calendar_verified",
+  "days": {
+    "2026-11-24": {
+      "category": "early_release",
+      "event": "Early release days for students"
+    },
+    "2026-11-25": {
+      "category": "early_release",
+      "event": "Early release days for students"
+    },
+    "2026-11-26": {
+      "category": "closed",
+      "event": "Thanksgiving Holiday - Schools and offices closed"
+    },
+    "2026-11-27": {
+      "category": "closed",
+      "event": "Thanksgiving Holiday - Schools and offices closed"
+    },
+    "2026-12-23": {
+      "category": "early_release",
+      "event": "Early release day for students"
+    },
+    "2026-12-24": {
+      "category": "closed",
+      "event": "Winter Break Holiday\u2014Schools and offices closed"
+    },
+    "2026-12-25": {
+      "category": "closed",
+      "event": "Winter Break Holiday\u2014Schools and offices closed"
+    },
+    "2026-12-28": {
+      "category": "closed",
+      "event": "Non-Instructional Day\u2014No school for students and teachers"
+    },
+    "2026-12-29": {
+      "category": "closed",
+      "event": "Non-Instructional Day\u2014No school for students and teachers"
+    },
+    "2026-12-30": {
+      "category": "closed",
+      "event": "Systemwide Closure\u2014Schools and offices closed"
+    },
+    "2026-12-31": {
+      "category": "closed",
+      "event": "Systemwide Closure\u2014Schools and offices closed"
+    },
+    "2027-01-01": {
+      "category": "closed",
+      "event": "New Year's Day\u2014Schools and offices closed"
+    },
+    "2027-01-18": {
+      "category": "closed",
+      "event": "Dr. Martin Luther King, Jr. Day Holiday\u2014Schools and offices closed"
+    }
+  }
+}
