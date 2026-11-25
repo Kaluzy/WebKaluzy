@@ -1,53 +1,49 @@
 {
-  "revision": 47,
+  "revision": 48,
   "priority": "important",
-  "date": "Tuesday • November 24",
-  "updated": "Nov 24, 2026 • 5:45 PM EST (school messages reviewed)",
+  "date": "Wednesday • November 25",
+  "updated": "Nov 25, 2026 • 5:45 PM EST (school messages reviewed)",
   "abiTonight": [
     "📖 Read 20 minutes; check folder for CogAT family letter"
   ],
   "abiNext": [
-    "🕒 Nov 25: early dismissal at 1:20 PM; no new math pages verified",
     "➗ Tue Dec 1: Unit 3 Lesson 2 pp. 73–74; Wed Dec 2 Lesson 3 pp. 75–76",
     "➗ Thu Dec 3: Lesson 4 pp. 77–78; Fri Dec 4 Lesson 5 pp. 79–80"
   ],
   "raphiTonight": [
-    "📖 Read 20 minutes; check Grade 4 folder for assignments",
-    "🕒 Nov 25: early dismissal at 1:20 PM"
+    "📖 Read 20 minutes; check Grade 4 folder for assignments"
   ],
   "raphiNext": [
     "📖 Continue daily reading; check Grade 4 homework folder for next week's schedule",
     "⚽ MSI winter indoor waitlisted; MSA Ritchie Park registration unconfirmed"
   ],
   "family": [
-    "🕒 Nov 25: dismissal at 1:20 PM; meet bus early, confirm pickup",
-    "👩‍🏫 Wed Nov 25: parent-teacher conference scheduled; check ParentSquare for appointment details",
-    "🎲 Wed Nov 25: grade-level BINGO",
     "🦃 Nov 26–27: Thanksgiving school closure",
     "📋 Dec 11: Federal Impact Aid Survey only if federally connected",
-    "➗ Mon Nov 30: Math Curriculum Night (time not yet confirmed)",
-    "🎁 Wed Nov 25 morning: optional BINGO prize donations due",
+    "➗ Mon Nov 30: Math Curriculum Night, 6:30–7:30 PM; adults only, in person; RSVP",
     "🎨 Tue Dec 1: optional PTA Reflections art submission deadline",
     "🗣️ Optional MCPS Culture & Climate Survey extended to Sun Nov 29",
-    "🛡️ December: Farmland Personal Body Safety lessons (family information; no form requested)"
+    "🛡️ December: Farmland Personal Body Safety lessons (family information; no form requested)",
+    "🏫 Nov 30: school resumes after Thanksgiving",
+    "📋 Nov 30–Dec 10: optional MCPS school consolidation study community sessions (see ParentSquare)"
   ],
-  "parentAction": "Confirm Wednesday 1:20 PM pickup; check scheduled conference details and address cafeteria balance privately.",
+  "parentAction": "Follow up on conference arrangements privately; review cafeteria balances and RSVP for Math Curriculum Night if attending.",
   "status": [
-    "🍎 Lunch: Nov 24 alerts repeat outstanding balances for both children; payment not confirmed. Review privately.",
-    "🚌 Transportation: Nov 25 early dismissal at 1:20 PM; meet bus early and tell teacher about pickup changes.",
+    "🍎 Lunch: Nov 24 itemized alerts remain latest; Nov 25 generic refill reminder adds no new amount. Payment not confirmed.",
+    "🚌 Transportation: no school Nov 26–27; regular school resumes Nov 30.",
     "📝 Forms: Abi CogAT letter and report-card envelope to check; past trip permissions remain unconfirmed, October Zoo fee reported paid; Raphi ParentVUE signature unconfirmed."
   ],
   "parentActions": [
     {
       "title": "Do now",
       "items": [
-        "Confirm 1:20 PM dismissal and pickup/bus-stop arrangements for Nov 25; notify teacher of changes.",
         "Review outstanding cafeteria balances privately and arrange payment or contact cafeteria; Nov 24 alerts unchanged.",
-        "One Nov 25 parent-teacher conference booking confirmed; check ParentSquare for details and verify other child's appointment.",
+        "Follow up on parent-teacher conferences through ParentSquare; completion not confirmed.",
         "Check Abi's folder for the Grade 2 CogAT assessment family letter (shared Nov 20); review attached information if paper copy is missing.",
         "Return signed report-card envelope to Abi's teacher; check both children's reports in ParentVUE.",
         "Check first marking-period report cards and K–8 progress reports in ParentVUE; follow up if missing.",
-        "Verify whether Abi attended Nov 17 Strathmore trip; signed permission and fee were not confirmed. Do not mark complete without confirmation."
+        "Verify whether Abi attended Nov 17 Strathmore trip; signed permission and fee were not confirmed. Do not mark complete without confirmation.",
+        "RSVP for Nov 30 Math Curriculum Night if attending (6:30–7:30 PM, adults only)."
       ]
     },
     {
@@ -62,7 +58,7 @@
         "Federal Impact Aid survey due Dec 11 only if federally connected.",
         "SAM clinic Nov 14 session elapsed; payment/enrollment and attendance remain unverified. Confirm status with provider before any future session.",
         "Optional MCPS Culture & Climate Survey closes Nov 29.",
-        "Optional Farmland BINGO prize donations by Nov 25; PTA Reflections art entry by Dec 1."
+        "Optional PTA Reflections art entry by Dec 1."
       ]
     }
   ]
