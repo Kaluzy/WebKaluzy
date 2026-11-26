@@ -1,12 +1,8 @@
 {
   "source": "https://ww2.montgomeryschoolsmd.org/calendar/download.aspx?file=MCPS_SchoolYearCalendar_Subscription",
-  "fetched_at": "2026-11-24T23:32:08-05:00",
+  "fetched_at": "2026-11-25T19:10:46-05:00",
   "calendar_health": "official_calendar_verified",
   "days": {
-    "2026-11-24": {
-      "category": "early_release",
-      "event": "Early release days for students"
-    },
     "2026-11-25": {
       "category": "early_release",
       "event": "Early release days for students"
