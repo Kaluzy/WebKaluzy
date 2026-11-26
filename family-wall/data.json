@@ -1,12 +1,13 @@
 {
-  "revision": 48,
-  "priority": "important",
-  "date": "Wednesday • November 25",
-  "updated": "Nov 25, 2026 • 5:45 PM EST (school messages reviewed)",
+  "revision": 49,
+  "priority": "normal",
+  "date": "Thursday • November 26",
+  "updated": "Nov 26, 2026 • school messages reviewed",
   "abiTonight": [
     "📖 Read 20 minutes; check folder for CogAT family letter"
   ],
   "abiNext": [
+    "✏️ Mon Nov 30: new spelling packet; practice one page nightly; return following Monday",
     "➗ Tue Dec 1: Unit 3 Lesson 2 pp. 73–74; Wed Dec 2 Lesson 3 pp. 75–76",
     "➗ Thu Dec 3: Lesson 4 pp. 77–78; Fri Dec 4 Lesson 5 pp. 79–80"
   ],
@@ -25,11 +26,12 @@
     "🗣️ Optional MCPS Culture & Climate Survey extended to Sun Nov 29",
     "🛡️ December: Farmland Personal Body Safety lessons (family information; no form requested)",
     "🏫 Nov 30: school resumes after Thanksgiving",
-    "📋 Nov 30–Dec 10: optional MCPS school consolidation study community sessions (see ParentSquare)"
+    "📋 Nov 30–Dec 10: optional MCPS school consolidation study community sessions (see ParentSquare)",
+    "🎁 Dec 18: optional Sparky’s Holiday Giving Project sign-up (ParentSquare)"
   ],
   "parentAction": "Follow up on conference arrangements privately; review cafeteria balances and RSVP for Math Curriculum Night if attending.",
   "status": [
-    "🍎 Lunch: Nov 24 itemized alerts remain latest; Nov 25 generic refill reminder adds no new amount. Payment not confirmed.",
+    "🍎 Lunch: Nov 24 itemized alerts remain latest; Nov 26 generic refill reminder adds no new amount. Payment not confirmed.",
     "🚌 Transportation: no school Nov 26–27; regular school resumes Nov 30.",
     "📝 Forms: Abi CogAT letter and report-card envelope to check; past trip permissions remain unconfirmed, October Zoo fee reported paid; Raphi ParentVUE signature unconfirmed."
   ],
@@ -58,7 +60,8 @@
         "Federal Impact Aid survey due Dec 11 only if federally connected.",
         "SAM clinic Nov 14 session elapsed; payment/enrollment and attendance remain unverified. Confirm status with provider before any future session.",
         "Optional MCPS Culture & Climate Survey closes Nov 29.",
-        "Optional PTA Reflections art entry by Dec 1."
+        "Optional PTA Reflections art entry by Dec 1.",
+        "Optional holiday giving project sign-up by Dec 18."
       ]
     }
   ]
