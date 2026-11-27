@@ -1,12 +1,8 @@
 {
   "source": "https://ww2.montgomeryschoolsmd.org/calendar/download.aspx?file=MCPS_SchoolYearCalendar_Subscription",
-  "fetched_at": "2026-11-26T19:30:10-05:00",
+  "fetched_at": "2026-11-27T18:59:23-05:00",
   "calendar_health": "official_calendar_verified",
   "days": {
-    "2026-11-26": {
-      "category": "closed",
-      "event": "Thanksgiving Holiday - Schools and offices closed"
-    },
     "2026-11-27": {
       "category": "closed",
       "event": "Thanksgiving Holiday - Schools and offices closed"
